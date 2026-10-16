@@ -106,10 +106,6 @@ ul { margin: 0; padding: 0; }
   clip: rect(0 0 0 0); white-space: nowrap;
 }
 
-/* ---------- Lens (Robotics / AI & Simulation views) ---------- */
-[data-lens="robotics"] [data-show="ai"],
-[data-lens="ai"] [data-show="robotics"] { display: none !important; }
-
 /* ---------- Scroll progress ---------- */
 .progress {
   position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 60;
@@ -227,28 +223,6 @@ ul { margin: 0; padding: 0; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 22px; font-size: 14px; color: var(--muted); }
 .hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
 .hero-meta svg { width: 15px; height: 15px; }
-
-/* Lens switch */
-.lens {
-  display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 26px;
-  font-size: 13px; color: var(--muted);
-}
-.lens-switch {
-  position: relative; display: inline-grid; grid-template-columns: 1fr 1fr;
-  padding: 4px; border-radius: 12px; background: var(--bg-alt); border: 1px solid var(--line);
-}
-.lens-switch button {
-  position: relative; z-index: 1; border: 0; background: transparent; cursor: pointer;
-  padding: 7px 14px; border-radius: 9px; font: 600 13.5px/1.2 var(--font-body); color: var(--muted);
-  white-space: nowrap; transition: color .2s;
-}
-.lens-switch button[aria-pressed="true"] { color: var(--text); }
-.lens-thumb {
-  position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px);
-  background: var(--surface); border-radius: 9px; box-shadow: var(--shadow);
-  transition: transform .3s cubic-bezier(.2,.8,.2,1);
-}
-[data-lens="ai"] .lens-thumb { transform: translateX(100%); }
 
 /* Robot cell canvas */
 .cell {
@@ -429,10 +403,10 @@ svg.loop-return { width: 100%; height: 34px; color: var(--accent); display: none
 .tl-date { font: 500 13px/1.4 var(--font-mono); color: var(--muted); white-space: nowrap; }
 .tl-org { color: var(--accent); font-weight: 600; margin: 4px 0 12px; font-size: 15px; }
 .tl-body { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
-.tl-body ul { list-style: none; display: grid; gap: 10px; margin-bottom: 14px; }
-.tl-body ul li { position: relative; padding-left: 16px; font-size: 15px; color: var(--muted); }
-.tl-body ul li::before { content: ""; position: absolute; left: 0; top: .72em; width: 6px; height: 6px; border-radius: 2px; background: var(--accent); }
-.tl-body ul li b { color: var(--text); font-weight: 600; }
+.tl-body ul:not(.tags) { list-style: none; display: grid; gap: 10px; margin-bottom: 14px; }
+.tl-body ul:not(.tags) li { position: relative; padding-left: 16px; font-size: 15px; color: var(--muted); }
+.tl-body ul:not(.tags) li::before { content: ""; position: absolute; left: 0; top: .72em; width: 6px; height: 6px; border-radius: 2px; background: var(--accent); }
+.tl-body ul:not(.tags) li b { color: var(--text); font-weight: 600; }
 .tl-body.compact { padding: 14px 18px; }
 .tl-body.compact p { margin: 0; color: var(--muted); font-size: 15px; }
 
@@ -443,10 +417,7 @@ svg.loop-return { width: 100%; height: 34px; color: var(--accent); display: none
 .skill-group { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
 .skill-group h3 { font-size: 1.05rem; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
 .skill-group h3 svg { width: 20px; height: 20px; color: var(--accent); }
-[data-lens="ai"] .skill-group[data-group="ml"] { order: -2; }
-[data-lens="ai"] .skill-group[data-group="sim"] { order: -1; }
-[data-lens="ai"] .skill-group[data-group="ml"],
-[data-lens="robotics"] .skill-group[data-group="robotics"] { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.skill-group[data-group="ml"], .skill-group[data-group="sim"] { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
 
 /* ---------- Education / publications ---------- */
 .two-col { display: grid; gap: 20px; }
@@ -503,7 +474,7 @@ svg.loop-return { width: 100%; height: 34px; color: var(--accent); display: none
 
 /* ---------- Print: a clean one-pager ---------- */
 @media print {
-  .site-header, .progress, .cell, .lens, .hero-ctas, .contact-actions, .site-footer, .skip-link { display: none !important; }
+  .site-header, .progress, .cell, .hero-ctas, .contact-actions, .site-footer, .skip-link { display: none !important; }
   body { background: #fff; color: #000; font-size: 11pt; }
   section.block { padding: 16px 0; }
   .card, .panel, .tl-body, .skill-group, .feature { box-shadow: none; break-inside: avoid; }

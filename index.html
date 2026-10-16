@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en" data-lens="robotics">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Viraat Saaran — Robotics Software Engineer (ROS 2 · Motion Planning · RL)</title>
-  <meta name="description" content="Viraat Saaran — Robotics Software Engineer in Stuttgart. 2.5+ years at Fraunhofer IPA building ROS 2 manipulation systems end to end: simulation, motion planning, perception and reinforcement learning in Isaac Sim and MuJoCo.">
+  <title>Viraat Saaran — Robotics Software Engineer (Reinforcement Learning · Sim2Real · Robotics)</title>
+  <meta name="description" content="Viraat Saaran — Robotics Software Engineer in Stuttgart. 2.5+ years at Fraunhofer IPA taking models from dataset to deployed robot: reinforcement learning in Isaac Sim and MuJoCo, sim-to-real, YOLOv8 perception, and the ROS 2 manipulation systems they run on.">
   <meta name="author" content="Viraat Saaran">
   <meta name="theme-color" content="#1F3864">
   <link rel="canonical" href="https://viraatsworld.github.io/">
@@ -12,7 +12,7 @@
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Viraat Saaran — Robotics Software Engineer">
-  <meta property="og:description" content="ROS 2 · Motion Planning · Reinforcement Learning · Sim-to-Real. Live autonomous pick-and-place at Nuremberg Messe 2025.">
+  <meta property="og:description" content="Reinforcement Learning · Sim2Real · Robotics. From dataset to deployed robot, including a live autonomous pick-and-place cell at Nuremberg Messe 2025.">
   <meta property="og:url" content="https://viraatsworld.github.io/">
   <meta property="og:image" content="https://viraatsworld.github.io/assets/img/viraat.jpg">
   <meta property="og:image:alt" content="Portrait of Viraat Saaran">
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Set theme + lens before paint to avoid a flash -->
+  <!-- Set theme before paint to avoid a flash -->
   <script>
     (function () {
       var d = document.documentElement;
@@ -36,9 +36,6 @@
       try {
         var t = localStorage.getItem('theme');
         if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
-        var q = new URLSearchParams(location.search).get('lens');
-        var l = q || localStorage.getItem('lens');
-        if (l === 'ai' || l === 'robotics') d.setAttribute('data-lens', l);
       } catch (e) {}
     })();
   </script>
@@ -60,7 +57,7 @@
       { "@type": "CollegeOrUniversity", "name": "University of Stuttgart" },
       { "@type": "CollegeOrUniversity", "name": "Dr. A.P.J. Abdul Kalam Technical University" }
     ],
-    "knowsAbout": ["ROS 2", "ros2_control", "MoveIt", "CuRobo", "Motion Planning", "Reinforcement Learning", "Sim-to-Real", "NVIDIA Isaac Sim", "Isaac Lab", "MuJoCo", "Gazebo", "URDF", "Behavior Trees", "PyTorch", "YOLOv8", "Computer Vision", "Hand-Eye Calibration", "Docker", "CI/CD"],
+    "knowsAbout": ["Reinforcement Learning", "Sim-to-Real", "NVIDIA Isaac Sim", "Isaac Lab", "MuJoCo", "ROS 2", "ros2_control", "MoveIt", "CuRobo", "Motion Planning", "Gazebo", "URDF", "Behavior Trees", "PyTorch", "YOLOv8", "Computer Vision", "Hand-Eye Calibration", "Docker", "CI/CD"],
     "knowsLanguage": ["hi", "en", "de"],
     "sameAs": ["https://github.com/viraatsworld"]
   }
@@ -97,6 +94,7 @@
         <span>Viraat Saaran</span>
       </a>
       <ul class="nav-links" id="nav-links">
+        <li><a href="#loop">Approach</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -127,19 +125,13 @@
           <div>
             <span class="status"><span class="status-dot" aria-hidden="true"></span> Open to robotics &amp; AI roles · open to relocation</span>
             <h1>Viraat Saaran</h1>
-            <p class="role">
-              <strong>Robotics Software Engineer</strong>
-              <span data-show="robotics"> — ROS 2 · Motion Planning · Reinforcement Learning</span>
-              <span data-show="ai"> — Reinforcement Learning · Sim2Real · Robotics</span>
+            <p class="role"><strong>Robotics Software Engineer</strong> — Reinforcement Learning · Sim2Real · Robotics</p>
+            <p class="lede">
+              I take models from dataset to deployed robot: rosbag and synthetic datasets, YOLOv8 perception, and
+              reinforcement learning policies trained in NVIDIA Isaac Sim and MuJoCo. I also build the ROS 2 manipulation
+              systems they run on, with motion planning and bring-up on Denso Cobotta, UR5e and Yaskawa GP7 arms.
             </p>
-            <p class="lede" data-show="robotics">
-              I build ROS 2 manipulation systems end to end — simulation, motion planning, robot modelling and
-              bring-up on Denso Cobotta, UR5e and Yaskawa GP7 arms — and train the models those systems run on.
-            </p>
-            <p class="lede" data-show="ai">
-              I take models from dataset to deployed robot — rosbags and synthetic data, YOLOv8 training, and
-              reinforcement learning policies trained in NVIDIA Isaac Sim and MuJoCo.
-            </p>
+
 
             <div class="hero-ctas">
               <a class="btn btn-primary" href="mailto:viraatsaaran@gmail.com">
@@ -155,16 +147,6 @@
               <a class="icon-btn" href="https://github.com/viraatsworld" aria-label="GitHub profile" style="width:46px;height:46px">
                 <svg aria-hidden="true"><use href="#i-github"/></svg>
               </a>
-            </div>
-
-            <div class="lens" role="group" aria-labelledby="lens-label">
-              <span id="lens-label">View my profile as</span>
-              <div class="lens-switch">
-                <span class="lens-thumb" aria-hidden="true"></span>
-                <button type="button" data-lens-btn="robotics" aria-pressed="true">Robotics</button>
-                <button type="button" data-lens-btn="ai" aria-pressed="false">AI &amp; Simulation</button>
-              </div>
-              <span class="visually-hidden" aria-live="polite" id="lens-announce"></span>
             </div>
 
             <div class="hero-meta">
@@ -189,10 +171,57 @@
         </div>
 
         <div class="facts reveal">
-          <div class="fact"><b>2.5+ yrs</b><span>at Fraunhofer IPA building ROS 2 manipulation systems</span></div>
-          <div class="fact"><b>3 arms</b><span>Denso Cobotta 900, UR5e and Yaskawa GP7 brought up</span></div>
+          <div class="fact"><b>2.5+ yrs</b><span>at Fraunhofer IPA, from dataset to deployed robot</span></div>
+          <div class="fact"><b>Sim → Real</b><span>RL policies in Isaac Sim &amp; MuJoCo, deployed on industrial arms</span></div>
           <div class="fact"><b>Live demo</b><span>Autonomous pick-and-place at Nuremberg Messe 2025</span></div>
           <div class="fact"><b>2 papers</b><span>Peer-reviewed, IGI Global &amp; Springer</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MODEL -> ROBOT LOOP ================= -->
+    <section class="block alt" id="loop">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">How I work</span>
+            <h2>From dataset to deployed robot</h2>
+          </div>
+          <p>I own the whole loop — and the loop closes on the real robot, not in a notebook.</p>
+        </div>
+        <ol class="loop">
+          <li class="reveal">
+            <h3>Capture data</h3>
+            <p>Datasets from recorded rosbags and synthetic data generated in simulation.</p>
+            <div class="tools">rosbags · RealSense · Isaac Sim</div>
+          </li>
+          <li class="reveal">
+            <h3>Train</h3>
+            <p>RL policies (SAC/PPO) with shaped rewards and curricula, plus detection and pose models.</p>
+            <div class="tools">PyTorch · YOLOv8 · SAC/PPO</div>
+          </li>
+          <li class="reveal">
+            <h3>Validate in sim</h3>
+            <p>Domain randomization and repeatable testing before any hardware trial.</p>
+            <div class="tools">Isaac Sim · MuJoCo · Gazebo</div>
+          </li>
+          <li class="reveal">
+            <h3>Plan &amp; orchestrate</h3>
+            <p>Motion planning plus Behavior Trees for execution and failure recovery.</p>
+            <div class="tools">MoveIt · CuRobo · BTs</div>
+          </li>
+          <li class="reveal">
+            <h3>Deploy on the cell</h3>
+            <p>Hand-eye calibration, bring-up and live inference on real arms.</p>
+            <div class="tools">ros2_control · Docker · CI/CD</div>
+          </li>
+        </ol>
+        <div class="loop-return-wrap reveal" aria-hidden="true">
+          <svg class="loop-return" viewBox="0 0 760 34" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M745 2 V18 Q745 30 733 30 H27 Q15 30 15 18 V8" stroke-dasharray="5 5"/>
+            <path d="M9 13 L15 4 L21 13"/>
+          </svg>
+          <span class="loop-return-label">retrain on failures observed on the robot</span>
         </div>
       </div>
     </section>
@@ -311,55 +340,8 @@
       </div>
     </section>
 
-    <!-- ================= MODEL -> ROBOT LOOP ================= -->
-    <section class="block alt" id="loop">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="eyebrow">How I work</span>
-            <h2>From dataset to deployed robot</h2>
-          </div>
-          <p>I own the whole loop — and the loop closes on the real robot, not in a notebook.</p>
-        </div>
-        <ol class="loop">
-          <li class="reveal">
-            <h3>Capture data</h3>
-            <p>Datasets from recorded rosbags and synthetic data from simulation.</p>
-            <div class="tools">rosbags · RealSense · Isaac Sim</div>
-          </li>
-          <li class="reveal">
-            <h3>Train</h3>
-            <p>Detection and pose models, and RL policies with shaped rewards and curricula.</p>
-            <div class="tools">PyTorch · YOLOv8 · SAC/PPO</div>
-          </li>
-          <li class="reveal">
-            <h3>Validate in sim</h3>
-            <p>Repeatable testing before hardware trials, with domain randomization.</p>
-            <div class="tools">Isaac Sim · MuJoCo · Gazebo</div>
-          </li>
-          <li class="reveal">
-            <h3>Plan &amp; orchestrate</h3>
-            <p>Motion planning plus Behavior Trees for execution and failure recovery.</p>
-            <div class="tools">MoveIt · CuRobo · BTs</div>
-          </li>
-          <li class="reveal">
-            <h3>Deploy on the cell</h3>
-            <p>Hand-eye calibration, bring-up and live inference on real arms.</p>
-            <div class="tools">ros2_control · Docker · CI/CD</div>
-          </li>
-        </ol>
-        <div class="loop-return-wrap reveal" aria-hidden="true">
-          <svg class="loop-return" viewBox="0 0 760 34" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M745 2 V18 Q745 30 733 30 H27 Q15 30 15 18 V8" stroke-dasharray="5 5"/>
-            <path d="M9 13 L15 4 L21 13"/>
-          </svg>
-          <span class="loop-return-label">retrain on failures observed on the robot</span>
-        </div>
-      </div>
-    </section>
-
     <!-- ================= ABOUT ================= -->
-    <section class="block" id="about">
+    <section class="block alt" id="about">
       <div class="container about">
         <aside class="about-side reveal">
           <img class="portrait" src="assets/img/viraat.jpg" width="220" height="220" alt="Portrait of Viraat Saaran in a navy suit" loading="lazy" decoding="async">
@@ -371,24 +353,16 @@
         </aside>
         <div class="about-text reveal">
           <span class="eyebrow">About</span>
-          <p class="lead" data-show="robotics">
-            Robotics software engineer with a computer science background — I like the moment a plan in simulation
-            becomes motion on a real arm.
+          <p class="lead">
+            Robotics engineer with a computer science (AI) background. I train policies in simulation and
+            make them work on real robots.
           </p>
-          <p class="lead" data-show="ai">
-            Robotics engineer with a computer science (AI) background — I take models from dataset to deployed robot.
-          </p>
-          <p data-show="robotics">
-            For 2.5+ years at Fraunhofer IPA I've built ROS 2 manipulation systems end to end: simulation, motion
-            planning, robot modelling and bring-up on Denso Cobotta, UR5e and Yaskawa GP7 arms, and training the
-            models those systems run on, from YOLOv8 perception to reinforcement learning policies in NVIDIA Isaac Sim
-            and MuJoCo.
-          </p>
-          <p data-show="ai">
-            For 2.5+ years at Fraunhofer IPA I've worked across the full model lifecycle: rosbag and synthetic dataset
-            creation, YOLOv8 training, and RL policies trained in Isaac Sim and MuJoCo — then deployed live on
-            industrial cobots. Python, PyTorch, reinforcement learning (SAC/PPO), computer vision, LLM fine-tuning,
-            ROS 2, Docker and CI/CD are my everyday tools.
+          <p>
+            For 2.5+ years at Fraunhofer IPA I've worked across the whole model lifecycle: rosbag and synthetic
+            dataset creation, YOLOv8 training, and reinforcement learning policies in NVIDIA Isaac Sim and MuJoCo.
+            Around those models I build the ROS 2 manipulation systems end to end: simulation, motion planning, robot
+            modelling and bring-up on Denso Cobotta, UR5e and Yaskawa GP7 arms. My everyday tools are Python, PyTorch,
+            RL (SAC/PPO), computer vision, LLM fine-tuning, ROS 2, Docker and CI/CD.
           </p>
           <p>
             I demonstrated a live autonomous pick-and-place cell at Nuremberg Messe 2025, and I'm now doing my
@@ -413,15 +387,14 @@
     </section>
 
     <!-- ================= EXPERIENCE ================= -->
-    <section class="block alt" id="experience">
+    <section class="block" id="experience">
       <div class="container">
         <div class="section-head reveal">
           <div>
             <span class="eyebrow">Experience</span>
             <h2>Where I've built things</h2>
           </div>
-          <p data-show="robotics">Showing the robotics view. Switch to <a href="?lens=ai#experience" data-lens-link="ai">AI &amp; Simulation</a> for the ML angle.</p>
-          <p data-show="ai">Showing the AI &amp; Simulation view. Switch to <a href="?lens=robotics#experience" data-lens-link="robotics">Robotics</a> for the hardware angle.</p>
+          <p>Research on learning-based control, built on years of robots running in real cells.</p>
         </div>
 
         <ol class="timeline">
@@ -434,9 +407,8 @@
             <div class="tl-body">
               <ul>
                 <li>Designing and training reinforcement learning policies for constrained, contact-rich pick-and-place inside a confined robotic work cell.</li>
-                <li data-show="robotics">Training and evaluating policies in NVIDIA Isaac Sim and MuJoCo, shaping reward functions and applying domain randomization to improve sample efficiency and robustness.</li>
-                <li data-show="ai">Shaping reward functions and training curricula, and applying domain randomization to improve sample efficiency and policy robustness.</li>
-                <li>Researching sim-to-real transfer — system identification, observation noise and latency modelling — for deployment on a physical manipulator.</li>
+                <li>Training and evaluating policies in NVIDIA Isaac Sim / Isaac Lab and MuJoCo; shaping reward functions and training curricula, and applying domain randomization to improve sample efficiency and policy robustness.</li>
+                <li>Researching sim-to-real transfer (system identification, observation noise and latency modelling) to close the reality gap on a physical manipulator.</li>
                 <li>Benchmarking learned policies against classical planners (RRT*, trajectory optimization) and evaluating physics-engine backends (Newton, PhysX) for training throughput.</li>
               </ul>
               <ul class="tags" aria-label="Technologies">
@@ -452,24 +424,17 @@
             </div>
             <p class="tl-org">Fraunhofer IPA · Stuttgart</p>
             <div class="tl-body">
-              <ul data-show="robotics">
-                <li><b>Simulation &amp; motion planning</b> — built simulation-to-motion-planning workflows in Gazebo, NVIDIA Isaac Sim, MoveIt and CuRobo; modelled robots in URDF and bridged simulation to ROS 2 for repeatable testing before hardware trials.</li>
-                <li><b>Robot modelling &amp; control</b> — URDF authoring, gripper integration (Robotiq 2F-85, OnRobot RG6, Schunk), topic-based controllers and hardware interfacing across Denso Cobotta 900, UR5e and Yaskawa GP7.</li>
-                <li><b>Perception &amp; learning pipelines</b> — ROS 2 perception with YOLOv8 for object detection and pose estimation on Intel RealSense depth streams; datasets from recorded rosbags, imitation learning, and ownership of training, evaluation and live inference.</li>
-                <li><b>Models running on hardware</b> — deployed trained vision models into running robot cells, closing the loop from model output to grasp execution under real lighting and placement variation.</li>
-                <li><b>Robot cell deployment</b> — cell setup, hand-eye calibration and frame alignment, hardware integration and end-to-end testing, including the vision-driven pick-and-place system shown live at Nuremberg Messe 2025.</li>
-                <li><b>Task orchestration &amp; MLOps</b> — Behavior Trees for autonomous execution and failure recovery; Docker and CI/CD (GitLab, GitHub Actions) for reproducible builds and training runs.</li>
-              </ul>
-              <ul data-show="ai">
-                <li><b>Perception &amp; dataset pipelines</b> — ROS 2 perception pipelines with YOLOv8 for object detection and pose estimation; datasets from recorded rosbags, and ownership of training, evaluation and live inference on Intel RealSense depth streams.</li>
-                <li><b>Model deployment on hardware</b> — deployed trained vision models into running robot cells on Denso Cobotta 900, UR5e and Yaskawa GP7, closing the loop from model output to grasp execution — including the system demonstrated live at Nuremberg Messe 2025.</li>
-                <li><b>Simulation-based training</b> — simulation workflows in Gazebo, NVIDIA Isaac Sim, MoveIt and CuRobo to generate training data and validate policies before real-world deployment.</li>
-                <li><b>Behavior &amp; control integration</b> — grippers and hardware interfaces with topic-based controllers; Behavior Trees for autonomous execution, decision-making and failure recovery.</li>
-                <li><b>MLOps &amp; CI/CD</b> — containerized ML and robotics workloads with Docker; CI/CD pipelines (GitLab, GitHub Actions) for reproducible training runs, testing and deployment.</li>
-                <li><b>Evaluation &amp; iteration</b> — dataset expansion and retraining cycles against failure cases seen on hardware, improving detection robustness under changing lighting and object placement.</li>
+              <ul>
+                <li><b>Simulation-based training</b>: built simulation-to-motion-planning workflows in Gazebo, NVIDIA Isaac Sim, MoveIt and CuRobo to generate training data and validate policies before real-world deployment; modelled robots in URDF and bridged simulation to ROS 2.</li>
+                <li><b>Perception &amp; dataset pipelines</b>: ROS 2 perception pipelines with YOLOv8 for object detection and pose estimation on Intel RealSense depth streams; datasets from recorded rosbags, imitation learning, and ownership of training, evaluation and live inference.</li>
+                <li><b>Model deployment on hardware</b>: deployed trained vision models into running robot cells on Denso Cobotta 900, UR5e and Yaskawa GP7, closing the loop from model output to grasp execution under real lighting and placement variation.</li>
+                <li><b>Evaluation &amp; iteration</b>: ran dataset expansion and retraining cycles against failure cases seen on hardware, improving detection robustness under changing lighting and object placement.</li>
+                <li><b>Robot modelling &amp; control</b>: URDF authoring, gripper integration (Robotiq 2F-85, OnRobot RG6, Schunk), topic-based controllers and hardware interfacing across all three arms.</li>
+                <li><b>Robot cell deployment</b>: cell setup, hand-eye calibration and frame alignment, hardware integration and end-to-end testing, including the vision-driven pick-and-place system shown live at Nuremberg Messe 2025.</li>
+                <li><b>Orchestration &amp; MLOps</b>: Behavior Trees for autonomous execution, decision-making and failure recovery; Docker and CI/CD (GitLab, GitHub Actions) for reproducible builds, training runs, testing and deployment.</li>
               </ul>
               <ul class="tags" aria-label="Technologies">
-                <li>ROS 2</li><li>ros2_control</li><li>MoveIt</li><li>CuRobo</li><li>Gazebo</li><li>Isaac Sim</li><li>URDF</li><li>YOLOv8</li><li>PyTorch</li><li>Behavior Trees</li><li>Docker</li><li>CI/CD</li>
+                <li>PyTorch</li><li>YOLOv8</li><li>Isaac Sim</li><li>Gazebo</li><li>ROS 2</li><li>ros2_control</li><li>MoveIt</li><li>CuRobo</li><li>URDF</li><li>Behavior Trees</li><li>Docker</li><li>CI/CD</li>
               </ul>
             </div>
           </li>
@@ -500,20 +465,16 @@
     </section>
 
     <!-- ================= SKILLS ================= -->
-    <section class="block" id="skills">
+    <section class="block alt" id="skills">
       <div class="container">
         <div class="section-head reveal">
           <div>
             <span class="eyebrow">Toolbox</span>
             <h2>Skills</h2>
           </div>
-          <p>What I reach for, from the URDF up to the training cluster.</p>
+          <p>What I reach for, from the training cluster down to the URDF.</p>
         </div>
         <div class="skills">
-          <div class="skill-group reveal" data-group="robotics">
-            <h3><svg aria-hidden="true"><use href="#i-arm"/></svg>Robotics &amp; Motion Planning</h3>
-            <ul class="tags"><li>ROS / ROS 2</li><li>ros2_control</li><li>MoveIt</li><li>CuRobo</li><li>URDF</li><li>Behavior Trees</li><li>Motion Planning</li><li>RRT*</li><li>Hand-Eye Calibration</li></ul>
-          </div>
           <div class="skill-group reveal" data-group="ml">
             <h3><svg aria-hidden="true"><use href="#i-brain"/></svg>AI / Machine Learning</h3>
             <ul class="tags"><li>PyTorch</li><li>Reinforcement Learning (SAC/PPO)</li><li>Reward Shaping</li><li>Sim-to-Real</li><li>Domain Randomization</li><li>YOLOv8</li><li>Computer Vision</li><li>Deep Learning</li><li>LLM Fine-tuning</li></ul>
@@ -521,6 +482,10 @@
           <div class="skill-group reveal" data-group="sim">
             <h3><svg aria-hidden="true"><use href="#i-cube"/></svg>Simulation</h3>
             <ul class="tags"><li>NVIDIA Isaac Sim</li><li>Isaac Lab</li><li>MuJoCo</li><li>Gazebo</li><li>Newton</li><li>PhysX</li></ul>
+          </div>
+          <div class="skill-group reveal" data-group="robotics">
+            <h3><svg aria-hidden="true"><use href="#i-arm"/></svg>Robotics &amp; Motion Planning</h3>
+            <ul class="tags"><li>ROS / ROS 2</li><li>ros2_control</li><li>MoveIt</li><li>CuRobo</li><li>URDF</li><li>Behavior Trees</li><li>Motion Planning</li><li>RRT*</li><li>Hand-Eye Calibration</li></ul>
           </div>
           <div class="skill-group reveal" data-group="hw">
             <h3><svg aria-hidden="true"><use href="#i-chip"/></svg>Robot Hardware</h3>
@@ -539,7 +504,7 @@
     </section>
 
     <!-- ================= RESEARCH & EDUCATION ================= -->
-    <section class="block alt" id="research">
+    <section class="block" id="research">
       <div class="container">
         <div class="section-head reveal">
           <div>
@@ -599,9 +564,9 @@
       <div class="container">
         <div class="contact reveal">
           <span class="eyebrow">Contact</span>
-          <h2>Building robots that learn? Let's talk.</h2>
+          <h2>Training robots that work in the real world? Let's talk.</h2>
           <p>
-            I'm looking for robotics software, motion planning and robot learning roles. Based in Stuttgart and open
+            I'm looking for robot learning, simulation and robotics software roles. Based in Stuttgart and open
             to relocation.
           </p>
           <div class="contact-actions">
@@ -634,7 +599,7 @@
   <footer class="site-footer">
     <div class="container">
       <span>© <span id="year">2026</span> Viraat Saaran · Stuttgart</span>
-      <span>Hand-written HTML, CSS &amp; vanilla JS · <a href="#top">Back to top ↑</a></span>
+      <span><a href="#top">Back to top ↑</a></span>
     </div>
   </footer>
 

@@ -1,4 +1,4 @@
-/* Page behaviour: theme, profile lens, nav, reveal-on-scroll, copy email. */
+/* Page behaviour: theme, nav, reveal-on-scroll, copy email, demo video. */
 (function () {
   'use strict';
   var root = document.documentElement;
@@ -29,37 +29,6 @@
     window.dispatchEvent(new Event('themechange'));
   });
   syncThemeLabel();
-
-  /* ---------- Lens: Robotics vs AI & Simulation ---------- */
-  var lensButtons = document.querySelectorAll('[data-lens-btn]');
-  var announce = document.getElementById('lens-announce');
-  var lensNames = { robotics: 'Robotics', ai: 'AI & Simulation' };
-
-  function setLens(lens, opts) {
-    if (!lensNames[lens]) return;
-    root.setAttribute('data-lens', lens);
-    lensButtons.forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-lens-btn') === lens));
-    });
-    store('lens', lens);
-    // Keep the URL shareable: ?lens=ai opens the AI view directly
-    try {
-      var url = new URL(location.href);
-      if (lens === 'robotics') url.searchParams.delete('lens'); else url.searchParams.set('lens', lens);
-      history.replaceState(null, '', url);
-    } catch (e) {}
-    if (opts && opts.announce) announce.textContent = 'Showing the ' + lensNames[lens] + ' view of the profile';
-  }
-  lensButtons.forEach(function (b) {
-    b.addEventListener('click', function () { setLens(b.getAttribute('data-lens-btn'), { announce: true }); });
-  });
-  document.querySelectorAll('[data-lens-link]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      setLens(a.getAttribute('data-lens-link'), { announce: true });
-    });
-  });
-  setLens(root.getAttribute('data-lens') || 'robotics');
 
   /* ---------- Mobile menu ---------- */
   var menuBtn = document.getElementById('menu-toggle');

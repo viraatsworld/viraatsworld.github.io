@@ -1,6 +1,6 @@
 # Viraat Saaran
 
-> Robotics Software Engineer in Stuttgart, Germany (open to relocation). ROS 2, motion planning, reinforcement learning and sim-to-real. 2.5+ years at Fraunhofer IPA building ROS 2 manipulation systems end to end on Denso Cobotta 900, UR5e and Yaskawa GP7 arms. Demonstrated a live autonomous pick-and-place cell at Nuremberg Messe 2025. Currently doing a master's thesis on sim-to-real RL for constrained motion planning.
+> Robotics Software Engineer in Stuttgart, Germany (open to relocation). Reinforcement learning, sim-to-real and robotics. 2.5+ years at Fraunhofer IPA taking models from dataset to deployed robot (synthetic and rosbag datasets, YOLOv8, RL policies in Isaac Sim and MuJoCo) and building the ROS 2 manipulation systems they run on, on Denso Cobotta 900, UR5e and Yaskawa GP7 arms. Demonstrated a live autonomous pick-and-place cell at Nuremberg Messe 2025. Currently doing a master's thesis on sim-to-real RL for constrained motion planning.
 
 ## Contact
 - Email: viraatsaaran@gmail.com
