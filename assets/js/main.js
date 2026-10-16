@@ -137,6 +137,14 @@
     }
   });
 
+  /* ---------- Demo video: no autoplay for reduced-motion users ---------- */
+  var messe = document.getElementById('messe-video');
+  if (messe && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    messe.removeAttribute('autoplay');
+    messe.pause();
+    messe.controls = true;
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();

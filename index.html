@@ -209,13 +209,15 @@
         </div>
 
         <!-- Headline project -->
-        <article class="feature reveal" aria-labelledby="p-lego">
-          <div class="media">
-            <!-- TODO: replace with GIF/video of the Nuremberg Messe demo, e.g.
-                 <video src="assets/video/nuremberg-messe.mp4" autoplay muted loop playsinline poster="assets/img/nuremberg-poster.jpg" aria-label="..."></video> -->
-            <div class="placeholder" role="img" aria-label="Placeholder: GIF of the Nuremberg Messe demo">
-              <div><svg aria-hidden="true"><use href="#i-film"/></svg>GIF: Nuremberg Messe demo</div>
-            </div>
+        <article class="feature feature-portrait reveal" aria-labelledby="p-lego">
+          <div class="media media-portrait">
+            <!-- Plays like a GIF (muted, looping) but ~4x smaller than assets/img/nuremberg-messe.gif -->
+            <video id="messe-video" src="assets/video/nuremberg-messe.mp4" poster="assets/img/nuremberg-messe-poster.jpg"
+              autoplay muted loop playsinline preload="metadata" width="720" height="960"
+              aria-label="Live demo at Nuremberg Messe 2025: a UR5e and a Yaskawa GP7 pick coloured LEGO bricks and stack them, sped up 2.2x">
+              <img src="assets/img/nuremberg-messe.gif" alt="Live demo at Nuremberg Messe 2025: robot arms picking and stacking coloured LEGO bricks">
+            </video>
+            <span class="media-tag">Nuremberg Messe 2025 · live · 2.2×</span>
           </div>
           <div class="feature-body">
             <span class="badge">● Headline project · 2025</span>
