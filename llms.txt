@@ -1,0 +1,29 @@
+# Viraat Saaran
+
+> Robotics Software Engineer in Stuttgart, Germany (open to relocation). ROS 2, motion planning, reinforcement learning and sim-to-real. 2.5+ years at Fraunhofer IPA building ROS 2 manipulation systems end to end on Denso Cobotta 900, UR5e and Yaskawa GP7 arms. Demonstrated a live autonomous pick-and-place cell at Nuremberg Messe 2025. Currently doing a master's thesis on sim-to-real RL for constrained motion planning.
+
+## Contact
+- Email: viraatsaaran@gmail.com
+- Phone: +49 15567111159
+- GitHub: https://github.com/viraatsworld
+- CV: https://viraatsworld.github.io/assets/cv/Viraat_Saaran_CV.pdf
+
+## Experience
+- Master's Thesis, Adaptive RL for Constrained Motion Planning of Robotic Manipulators, Fraunhofer IPA (09/2026 to present): SAC/PPO in Isaac Sim / Isaac Lab and MuJoCo; reward shaping, curricula, domain randomization; sim-to-real via system identification, observation noise and latency modelling; benchmarked against RRT* and trajectory optimization; Newton vs PhysX.
+- Research Assistant, Fraunhofer IPA, Stuttgart (03/2024 to 08/2026): Gazebo, Isaac Sim, MoveIt, CuRobo, URDF, ros2_control; YOLOv8 perception on Intel RealSense; hand-eye calibration and robot cell deployment; Behavior Trees; Docker and CI/CD.
+- Assistant System Engineer, Tata Consultancy Services, India (08/2021 to 03/2023).
+- R&D Machine Learning Intern, E-bibil Technologies, remote (05/2020 to 09/2020).
+
+## Projects
+- LEGO Pose Estimation, Nuremberg Messe 2025: end-to-end ROS 2 perception-to-pick-and-place pipeline (Intel RealSense, Behavior Trees, Docker), run continuously as a public demo.
+- Adaptive RL for constrained motion planning (master's thesis).
+- Dynamic Path Planning: ROS 2 with Gazebo, Isaac Sim, MoveIt and CuRobo; compared planner behaviour across simulators to find where trajectories diverged on real hardware.
+- MathGPT (2025): fine-tuned GPT-2 on a mathematical reasoning dataset on cloud GPU clusters.
+
+## Education
+- M.Sc. Computer Science, University of Stuttgart (from 04/2023). Focus: Autonomous Systems, Robotics, ML.
+- B.Tech Computer Science, Dr. A.P.J. Abdul Kalam Technical University, India (2017 to 2021).
+
+## Publications
+- Reconstruction of 2D Images Into 3D, IGI Global (2021). DOI: 10.4018/978-1-7998-3327-7.ch002
+- A Literature Review on GANs with Applications in Healthcare, Springer (2020). DOI: 10.1007/978-981-33-6981-8_18
