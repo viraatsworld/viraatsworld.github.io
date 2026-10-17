@@ -152,8 +152,16 @@ ul { margin: 0; padding: 0; }
   :root:not([data-theme="light"]) .theme-icon-light { display: none; }
 }
 .menu-btn { display: none; }
+.lang-btn {
+  height: 38px; min-width: 42px; padding: 0 10px; border-radius: 10px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); color: var(--text);
+  font: 600 13px/1 var(--font-mono); letter-spacing: .04em;
+}
+.lang-btn:hover { background: var(--accent-soft); }
+/* Hide text briefly while German loads, to avoid an English flash */
+[data-lang-pending="de"] main, [data-lang-pending="de"] .nav-links { visibility: hidden; }
 
-@media (max-width: 880px) {
+@media (max-width: 1080px) {
   .menu-btn { display: grid; }
   .nav-links {
     position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0;
@@ -366,6 +374,44 @@ svg.loop-return { width: 100%; height: 34px; color: var(--accent); display: none
 @media (min-width: 900px) { svg.loop-return { display: block; } }
 .loop-return-wrap { display: grid; gap: 4px; justify-items: center; margin-top: 10px; }
 .loop-return-label { font: 500 13px/1.3 var(--font-mono); color: var(--muted); text-align: center; }
+
+/* ---------- Simulation & motion planning ---------- */
+.stack-grid { display: grid; gap: 28px; }
+@media (min-width: 900px) { .stack-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.stack-col { display: grid; gap: 12px; align-content: start; }
+.stack-h { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; margin-bottom: 4px; }
+.stack-h svg { width: 22px; height: 22px; color: var(--accent); }
+.tool { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
+.tool-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; margin-bottom: 6px; }
+.tool h4 { margin: 0; font: 600 1.02rem/1.3 var(--font-head); }
+.tool p { margin: 0; color: var(--muted); font-size: 14.5px; }
+.tool-tag { font: 500 11.5px/1 var(--font-mono); color: var(--accent); background: var(--accent-soft); padding: 5px 8px; border-radius: 6px; white-space: nowrap; }
+.callout { border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px 18px; }
+.callout b { display: block; margin-bottom: 6px; font-family: var(--font-head); }
+.callout p { margin: 0; color: var(--text); font-size: 14.5px; }
+
+/* ---------- Hardware ---------- */
+.hw-h { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; margin: 8px 0 14px; }
+.hw-h svg { width: 22px; height: 22px; color: var(--accent); }
+.hw-cards { display: grid; gap: 16px; margin-bottom: 28px; }
+@media (min-width: 640px) { .hw-cards { grid-template-columns: repeat(3, 1fr); } }
+.hw-card { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.hw-media { aspect-ratio: 4 / 3; background: #0b1220; overflow: hidden; }
+.hw-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.hw-card:hover .hw-media img { transform: scale(1.03); }
+.hw-media.hw-illus { background: #eef1f7; display: grid; place-items: center; }
+.hw-media.hw-illus img { width: 62%; height: auto; object-fit: contain; }
+.hw-card figcaption { padding: 14px 16px 16px; display: grid; gap: 4px; font-size: 14.5px; color: var(--muted); }
+.hw-card figcaption b { color: var(--text); font: 600 1.02rem/1.3 var(--font-head); }
+.hw-src { font: 500 11.5px/1.3 var(--font-mono); color: var(--accent); }
+.grip-work { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; }
+.grip-work h3 { font-size: 1.08rem; margin-bottom: 12px; }
+.grip-work ul { list-style: none; display: grid; gap: 8px; }
+@media (min-width: 900px) { .grip-work ul { grid-template-columns: 1fr 1fr; column-gap: 28px; } }
+.grip-work li { position: relative; padding-left: 16px; color: var(--muted); font-size: 15px; }
+.grip-work li::before { content: ""; position: absolute; left: 0; top: .72em; width: 6px; height: 6px; border-radius: 2px; background: var(--accent); }
+.grip-also { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+.grip-also span { color: var(--text); font-weight: 600; }
 
 /* ---------- About ---------- */
 .about { display: grid; gap: 32px; align-items: start; }

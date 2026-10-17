@@ -2,6 +2,8 @@
 
 > Robotics Software Engineer in Stuttgart, Germany (open to relocation). Reinforcement learning, sim-to-real and robotics. 2.5+ years at Fraunhofer IPA taking models from dataset to deployed robot (synthetic and rosbag datasets, YOLOv8, RL policies in Isaac Sim and MuJoCo) and building the ROS 2 manipulation systems they run on, on Denso Cobotta 900, UR5e and Yaskawa GP7 arms. Demonstrated a live autonomous pick-and-place cell at Nuremberg Messe 2025. Currently doing a master's thesis on sim-to-real RL for constrained motion planning.
 
+Site available in English and German (?lang=de).
+
 ## Contact
 - Email: viraatsaaran@gmail.com
 - Phone: +49 15567111159
@@ -10,7 +12,7 @@
 
 ## Experience
 - Master's Thesis, Adaptive RL for Constrained Motion Planning of Robotic Manipulators, Fraunhofer IPA (09/2026 to present): SAC/PPO in Isaac Sim / Isaac Lab and MuJoCo; reward shaping, curricula, domain randomization; sim-to-real via system identification, observation noise and latency modelling; benchmarked against RRT* and trajectory optimization; Newton vs PhysX.
-- Research Assistant, Fraunhofer IPA, Stuttgart (03/2024 to 08/2026): Gazebo, Isaac Sim, MoveIt, CuRobo, URDF, ros2_control; YOLOv8 perception on Intel RealSense; hand-eye calibration and robot cell deployment; Behavior Trees; Docker and CI/CD.
+- Research Assistant, Fraunhofer IPA, Stuttgart (03/2024 to 08/2026): Gazebo, Isaac Sim, MoveIt, CuRobo, URDF, ros2_control; grippers Robotiq 2F-85, OnRobot RG6, Schunk EGP; YOLOv8 perception on Intel RealSense; hand-eye calibration and robot cell deployment; Behavior Trees; Docker and CI/CD.
 - Assistant System Engineer, Tata Consultancy Services, India (08/2021 to 03/2023).
 - R&D Machine Learning Intern, E-bibil Technologies, remote (05/2020 to 09/2020).
 

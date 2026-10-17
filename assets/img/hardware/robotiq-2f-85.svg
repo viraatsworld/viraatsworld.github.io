@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Illustration of an adaptive two-finger gripper with linkage fingers">
+  <g fill="#f4f6fa" stroke="#1F3864" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="96" y="22" width="48" height="16" rx="4"/>
+    <rect x="78" y="38" width="84" height="62" rx="12"/>
+    <path d="M92 100 L70 150 L84 156 L102 112Z"/>
+    <path d="M110 100 L88 146"/>
+    <path d="M148 100 L170 150 L156 156 L138 112Z"/>
+    <path d="M130 100 L152 146"/>
+    <path d="M70 150 L74 198 L92 198 L86 154Z"/>
+    <path d="M170 150 L166 198 L148 198 L154 154Z"/>
+  </g>
+  <g fill="#1F3864"><circle cx="92" cy="104" r="4"/><circle cx="148" cy="104" r="4"/><circle cx="78" cy="152" r="4"/><circle cx="162" cy="152" r="4"/></g>
+  <rect x="100" y="56" width="40" height="8" rx="4" fill="#1F3864" opacity=".25"/>
+</svg>

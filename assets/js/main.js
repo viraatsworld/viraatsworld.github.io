@@ -1,4 +1,4 @@
-/* Page behaviour: theme, nav, reveal-on-scroll, copy email, demo video. */
+/* Page behaviour: theme, language, nav, reveal-on-scroll, copy email, demo video. */
 (function () {
   'use strict';
   var root = document.documentElement;
@@ -29,6 +29,40 @@
     window.dispatchEvent(new Event('themechange'));
   });
   syncThemeLabel();
+
+  /* ---------- Language: English (in the HTML) / German (assets/js/i18n-de.js) ---------- */
+  var langBtn = document.getElementById('lang-toggle');
+  var i18nEls = document.querySelectorAll('[data-i18n]');
+  var english = new Map();
+  var englishTitle = document.title;
+  var DE = window.I18N_DE || {};
+  i18nEls.forEach(function (el) { english.set(el, el.innerHTML); });
+  var lang = 'en';
+
+  function setLang(next, opts) {
+    lang = next === 'de' ? 'de' : 'en';
+    i18nEls.forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      el.innerHTML = lang === 'de' && DE[key] ? DE[key] : english.get(el);
+    });
+    document.title = lang === 'de' ? DE['meta.title'] || englishTitle : englishTitle;
+    root.setAttribute('lang', lang);
+    root.removeAttribute('data-lang-pending');
+    // Button shows the language you can switch to
+    langBtn.textContent = lang === 'de' ? 'EN' : 'DE';
+    langBtn.setAttribute('lang', lang === 'de' ? 'en' : 'de');
+    langBtn.setAttribute('aria-label', lang === 'de' ? DE['ui.toEn'] : DE['ui.toDe']);
+    if (opts && opts.save) {
+      store('lang', lang);
+      try {
+        var url = new URL(location.href);
+        if (lang === 'de') url.searchParams.set('lang', 'de'); else url.searchParams.delete('lang');
+        history.replaceState(null, '', url);
+      } catch (e) {}
+    }
+  }
+  langBtn.addEventListener('click', function () { setLang(lang === 'de' ? 'en' : 'de', { save: true }); });
+  if (root.getAttribute('data-lang-pending') === 'de') setLang('de');
 
   /* ---------- Mobile menu ---------- */
   var menuBtn = document.getElementById('menu-toggle');
@@ -98,7 +132,9 @@
   var copyStatus = document.getElementById('copy-status');
   copyBtn.addEventListener('click', function () {
     var email = copyBtn.getAttribute('data-email');
-    var done = function () { copyStatus.textContent = 'Copied ' + email + ' to clipboard'; };
+    var done = function () {
+      copyStatus.textContent = lang === 'de' ? DE['ui.copied'] + email : 'Copied ' + email + ' to clipboard';
+    };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(email).then(done, function () { copyStatus.textContent = email; });
     } else {
