@@ -8,7 +8,7 @@ Plain HTML/CSS/vanilla JS, no build step. Push to `main` and GitHub Pages serves
 - `assets/css/style.css`: styles (light/dark via `prefers-color-scheme` + manual toggle)
 - `assets/js/main.js`: theme, EN/DE language toggle, nav, scroll reveals, copy-email, demo video
 - `assets/js/i18n-de.js`: German text, keyed by the `data-i18n` attributes in `index.html`
-- `assets/img/hardware/`: robot photos (own footage) and gripper/robot illustrations
+- `assets/img/hardware/`: robot and gripper product images
 - `assets/js/robot.js`: interactive pick-and-place arm in the hero
 - `assets/cv/Viraat_Saaran_CV.pdf`: downloadable CV
 

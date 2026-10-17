@@ -99,6 +99,7 @@
         <span>Viraat Saaran</span>
       </a>
       <ul class="nav-links" id="nav-links">
+        <li><a href="#top" data-i18n="nav.about">About</a></li>
         <li><a href="#loop" data-i18n="nav.approach">Approach</a></li>
         <li><a href="#stack" data-i18n="nav.stack">Sim &amp; Planning</a></li>
         <li><a href="#work" data-i18n="nav.work">Work</a></li>
@@ -127,17 +128,25 @@
     <!-- ================= HERO ================= -->
     <section class="hero" id="top">
       <div class="container">
-        <div class="hero-grid">
+        <div class="hero-grid hero-about">
           <div>
             <span class="status"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="hero.status">Open to robot learning &amp; robotics roles · open to relocation</span></span>
             <h1>Viraat Saaran</h1>
             <p class="role" data-i18n="hero.role"><strong>Robotics Software Engineer</strong> — Reinforcement Learning · Sim2Real · Motion Planning</p>
-            <p class="lede" data-i18n="hero.lede">
-              I take models from dataset to deployed robot: rosbag and synthetic datasets, YOLOv8 perception, and
-              reinforcement learning policies trained in NVIDIA Isaac Sim and MuJoCo. Around them I build the ROS 2
-              manipulation systems they run on, with motion planning in MoveIt and CuRobo, simulation in Gazebo and Isaac Sim,
-              and bring-up on Denso Cobotta, UR5e and Yaskawa GP7 arms.
-            </p>
+            <p class="headline" data-i18n="about.lead">I train policies in simulation and make them work on real robots.</p>
+            <div class="bio">
+              <p data-i18n="about.p1">
+                I'm a robotics engineer with a computer science (AI) background. For 2.5+ years at Fraunhofer IPA I've
+                worked across the whole model lifecycle: rosbag and synthetic dataset creation, YOLOv8 training, and
+                reinforcement learning policies in NVIDIA Isaac Sim and MuJoCo. Around those models I build ROS 2
+                manipulation systems end to end: simulation in Gazebo and Isaac Sim, motion planning with MoveIt and
+                CuRobo, robot modelling in URDF, and bring-up on Denso Cobotta, UR5e and Yaskawa GP7 arms.
+              </p>
+              <p data-i18n="about.p2">
+                I demonstrated a live autonomous pick-and-place cell at Nuremberg Messe 2025, and I'm now doing my
+                master's thesis on sim-to-real reinforcement learning for constrained motion planning.
+              </p>
+            </div>
 
             <div class="hero-ctas">
               <a class="btn btn-primary" href="mailto:viraatsaaran@gmail.com">
@@ -154,26 +163,20 @@
                 <svg aria-hidden="true"><use href="#i-github"/></svg>
               </a>
             </div>
-
-            <div class="hero-meta">
-              <span><svg aria-hidden="true"><use href="#i-pin"/></svg> <span data-i18n="hero.location">Stuttgart, Germany</span></span>
-              <a href="tel:+4915567111159" style="color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:6px"><svg aria-hidden="true"><use href="#i-phone"/></svg> +49 15567111159</a>
-              <span><svg aria-hidden="true"><use href="#i-chat"/></svg> <span data-i18n="hero.langs">English · Hindi · German (A2)</span></span>
-            </div>
           </div>
 
-          <figure class="cell" style="margin:0">
-            <div class="cell-bar" aria-hidden="true">
-              <span class="dots"><i></i><i></i><i></i></span>
-              <span>pick_and_place · colour sort</span>
-              <span id="cell-mode">auto</span>
+          <aside class="profile-card" aria-label="Profile">
+            <img class="portrait" src="assets/img/viraat.jpg" width="260" height="260" alt="Portrait of Viraat Saaran in a navy suit" decoding="async" fetchpriority="high">
+            <div class="currently">
+              <span class="currently-label"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="hero.currently.t">Currently</span></span>
+              <p data-i18n="hero.currently.d">Master's thesis on sim-to-real RL for constrained motion planning at Fraunhofer IPA, Stuttgart.</p>
             </div>
-            <canvas id="robot" width="600" height="408" role="img"
-              aria-label="Animated robot arm sorting coloured bricks into matching bins. Move your pointer over it to take control."></canvas>
-            <pre class="cell-hud" id="hud" aria-hidden="true">/joint_states</pre>
-            <span class="cell-hint" aria-hidden="true" data-i18n="hero.hint">move pointer to teleop ↗</span>
-            <figcaption class="visually-hidden">An interactive sketch of a colour-sorting pick-and-place cell, inspired by the LEGO demo at Nuremberg Messe 2025.</figcaption>
-          </figure>
+            <dl>
+              <div><dt data-i18n="about.based">Based in</dt><dd data-i18n="about.based.d">Stuttgart, Germany, open to relocation</dd></div>
+              <div><dt data-i18n="hero.phone">Phone</dt><dd><a href="tel:+4915567111159">+49 15567111159</a></dd></div>
+              <div><dt data-i18n="about.langs">Languages</dt><dd data-i18n="about.langs.d">Hindi (native) · English (professional) · German (A2, improving)</dd></div>
+            </dl>
+          </aside>
         </div>
 
         <div class="facts reveal">
@@ -190,7 +193,7 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow" data-i18n="loop.eyebrow">How I work</span>
+            <span class="eyebrow"><span class="eyebrow-num">01</span> <span data-i18n="loop.eyebrow">How I work</span></span>
             <h2 data-i18n="loop.title">From dataset to deployed robot</h2>
           </div>
           <p data-i18n="loop.sub">I own the whole loop, and it closes on the real robot, not in a notebook.</p>
@@ -237,10 +240,26 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow" data-i18n="stack.eyebrow">Simulation &amp; motion planning</span>
+            <span class="eyebrow"><span class="eyebrow-num">02</span> <span data-i18n="stack.eyebrow">Simulation &amp; motion planning</span></span>
             <h2 data-i18n="stack.title">Proven in simulation before it touches hardware</h2>
           </div>
           <p data-i18n="stack.sub">I test every idea in simulation first, then check where it breaks on hardware.</p>
+        </div>
+
+        <div class="stack-demo reveal">
+            <figure class="cell" style="margin:0">
+            <div class="cell-bar" aria-hidden="true">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span>pick_and_place · colour sort</span>
+              <span id="cell-mode">auto</span>
+            </div>
+            <canvas id="robot" width="600" height="408" role="img"
+              aria-label="Animated robot arm sorting coloured bricks into matching bins. Move your pointer over it to take control."></canvas>
+            <pre class="cell-hud" id="hud" aria-hidden="true">/joint_states</pre>
+            <span class="cell-hint" aria-hidden="true" data-i18n="hero.hint">move pointer to teleop ↗</span>
+            <figcaption class="visually-hidden">An interactive sketch of a colour-sorting pick-and-place cell, inspired by the LEGO demo at Nuremberg Messe 2025.</figcaption>
+          </figure>
+          <p class="stack-demo-note" data-i18n="stack.demo">A tiny planar sim of the Nuremberg task: inverse kinematics and a pick-and-place state machine, live in your browser. Move your pointer over it to take control.</p>
         </div>
 
         <div class="stack-grid">
@@ -292,7 +311,7 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow" data-i18n="work.eyebrow">Selected work</span>
+            <span class="eyebrow"><span class="eyebrow-num">03</span> <span data-i18n="work.eyebrow">Selected work</span></span>
             <h2 data-i18n="work.title">Robots that leave the simulator</h2>
           </div>
           <p data-i18n="work.sub">Perception, planning and learning, taken all the way to hardware.</p>
@@ -403,7 +422,7 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow" data-i18n="hw.eyebrow">Hardware</span>
+            <span class="eyebrow"><span class="eyebrow-num">04</span> <span data-i18n="hw.eyebrow">Hardware</span></span>
             <h2 data-i18n="hw.title">Robots and grippers I've brought up</h2>
           </div>
           <p data-i18n="hw.sub">URDF models, controllers and hardware interfaces, from simulation to the real cell.</p>
@@ -412,36 +431,32 @@
         <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-arm"/></svg><span data-i18n="hw.robots">Manipulators</span></h3>
         <div class="hw-cards">
           <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/ur5e.jpg" width="800" height="800" loading="lazy" decoding="async" alt="UR5e collaborative robot arm in the demo cell at Nuremberg Messe"></div>
-            <figcaption><b>Universal Robots UR5e</b><span class="hw-src" data-i18n="hw.src.own">Own photo · Nuremberg Messe</span><span data-i18n="hw.ur5e">Picked LEGO bricks in the live demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
+            <div class="hw-media"><img src="assets/img/hardware/ur5e.jpg" width="596" height="640" loading="lazy" decoding="async" alt="Universal Robots UR5e collaborative robot arm"></div>
+            <figcaption><b>Universal Robots UR5e</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.ur5e">Picked LEGO bricks in the live demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
           </figure>
           <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/yaskawa-gp7.jpg" width="800" height="800" loading="lazy" decoding="async" alt="Yaskawa GP7 industrial robot arm in the demo cell at Nuremberg Messe"></div>
-            <figcaption><b>Yaskawa GP7</b><span class="hw-src" data-i18n="hw.src.own">Own photo · Nuremberg Messe</span><span data-i18n="hw.gp7">Stacked bricks in the same demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
+            <div class="hw-media"><img src="assets/img/hardware/yaskawa-gp7.jpg" width="640" height="636" loading="lazy" decoding="async" alt="Yaskawa Motoman GP7 industrial robot arm"></div>
+            <figcaption><b>Yaskawa GP7</b><span class="hw-src" data-i18n="hw.cat.ind">Industrial robot</span><span data-i18n="hw.gp7">Stacked bricks in the same demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
           </figure>
           <figure class="hw-card reveal">
-            <!-- TODO: replace illustration with your own photo of the Cobotta -->
-            <div class="hw-media hw-illus"><img src="assets/img/hardware/denso-cobotta.svg" width="240" height="240" loading="lazy" alt="Illustration of the Denso Cobotta 900 compact collaborative arm"></div>
-            <figcaption><b>Denso Cobotta 900</b><span class="hw-src" data-i18n="hw.src.illus">Illustration</span><span data-i18n="hw.cobotta">URDF authoring, gripper integration and topic-based controllers.</span></figcaption>
+            <div class="hw-media"><img src="assets/img/hardware/denso-cobotta.jpg" width="632" height="640" loading="lazy" alt="Denso Cobotta compact collaborative robot arm"></div>
+            <figcaption><b>Denso Cobotta 900</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.cobotta">URDF authoring, gripper integration and topic-based controllers.</span></figcaption>
           </figure>
         </div>
 
         <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-grip"/></svg><span data-i18n="hw.grippers">Grippers</span></h3>
         <div class="hw-cards">
           <figure class="hw-card reveal">
-            <!-- TODO: replace illustration with your own photo -->
-            <div class="hw-media hw-illus"><img src="assets/img/hardware/robotiq-2f-85.svg" width="240" height="240" loading="lazy" alt="Illustration of the Robotiq 2F-85 adaptive two-finger gripper"></div>
-            <figcaption><b>Robotiq 2F-85</b><span class="hw-src" data-i18n="hw.src.illus">Illustration</span><span data-i18n="hw.2f85">Adaptive two-finger gripper.</span></figcaption>
+            <div class="hw-media"><img src="assets/img/hardware/robotiq-2f-85.jpg" width="640" height="640" loading="lazy" alt="Robotiq 2F-85 adaptive two-finger gripper"></div>
+            <figcaption><b>Robotiq 2F-85</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.2f85">Adaptive two-finger gripper.</span></figcaption>
           </figure>
           <figure class="hw-card reveal">
-            <!-- TODO: replace illustration with your own photo -->
-            <div class="hw-media hw-illus"><img src="assets/img/hardware/onrobot-rg6.svg" width="240" height="240" loading="lazy" alt="Illustration of the OnRobot RG6 two-finger gripper"></div>
-            <figcaption><b>OnRobot RG6</b><span class="hw-src" data-i18n="hw.src.illus">Illustration</span><span data-i18n="hw.rg6">Long-stroke two-finger gripper.</span></figcaption>
+            <div class="hw-media"><img src="assets/img/hardware/onrobot-rg6.jpg" width="469" height="640" loading="lazy" alt="OnRobot RG6 two-finger gripper"></div>
+            <figcaption><b>OnRobot RG6</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.rg6">Long-stroke two-finger gripper.</span></figcaption>
           </figure>
           <figure class="hw-card reveal">
-            <!-- TODO: replace illustration with your own photo -->
-            <div class="hw-media hw-illus"><img src="assets/img/hardware/schunk-egp.svg" width="240" height="240" loading="lazy" alt="Illustration of the Schunk EGP electric parallel gripper"></div>
-            <figcaption><b>Schunk EGP</b><span class="hw-src" data-i18n="hw.src.illus">Illustration</span><span data-i18n="hw.egp">Compact electric parallel gripper.</span></figcaption>
+            <div class="hw-media"><img src="assets/img/hardware/schunk-egp.jpg" width="390" height="640" loading="lazy" alt="Schunk EGP electric parallel gripper"></div>
+            <figcaption><b>Schunk EGP</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.egp">Compact electric parallel gripper.</span></figcaption>
           </figure>
         </div>
 
@@ -458,45 +473,12 @@
       </div>
     </section>
 
-    <!-- ================= ABOUT ================= -->
-    <section class="block alt" id="about">
-      <div class="container about">
-        <aside class="about-side reveal">
-          <img class="portrait" src="assets/img/viraat.jpg" width="220" height="220" alt="Portrait of Viraat Saaran in a navy suit" loading="lazy" decoding="async">
-          <dl>
-            <div><dt data-i18n="about.based">Based in</dt><dd data-i18n="about.based.d">Stuttgart, Germany, open to relocation</dd></div>
-            <div><dt data-i18n="about.now">Currently</dt><dd data-i18n="about.now.d">Master's thesis at Fraunhofer IPA</dd></div>
-            <div><dt data-i18n="about.langs">Languages</dt><dd data-i18n="about.langs.d">Hindi (native) · English (professional) · German (A2, improving)</dd></div>
-          </dl>
-        </aside>
-        <div class="about-text reveal">
-          <span class="eyebrow" data-i18n="about.eyebrow">About</span>
-          <p class="lead" data-i18n="about.lead">
-            Robotics engineer with a computer science (AI) background. I train policies in simulation and
-            make them work on real robots.
-          </p>
-          <p data-i18n="about.p1">
-            For 2.5+ years at Fraunhofer IPA I've worked across the whole model lifecycle: rosbag and synthetic
-            dataset creation, YOLOv8 training, and reinforcement learning policies in NVIDIA Isaac Sim and MuJoCo.
-            Around those models I build ROS 2 manipulation systems end to end: simulation in Gazebo and Isaac Sim,
-            motion planning with MoveIt and CuRobo, robot modelling in URDF, and bring-up on Denso Cobotta, UR5e and
-            Yaskawa GP7 arms. My everyday tools are Python, PyTorch, RL (SAC/PPO), computer vision, LLM fine-tuning,
-            ROS 2, Docker and CI/CD.
-          </p>
-          <p data-i18n="about.p2">
-            I demonstrated a live autonomous pick-and-place cell at Nuremberg Messe 2025, and I'm now doing my
-            master's thesis on sim-to-real reinforcement learning for constrained motion planning.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!-- ================= EXPERIENCE ================= -->
-    <section class="block" id="experience">
+    <section class="block alt" id="experience">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow" data-i18n="exp.eyebrow">Experience</span>
+            <span class="eyebrow"><span class="eyebrow-num">05</span> <span data-i18n="exp.eyebrow">Experience</span></span>
             <h2 data-i18n="exp.title">Where I've built things</h2>
           </div>
           <p data-i18n="exp.sub">Research on learning-based control, built on years of robots running in real cells.</p>
@@ -570,11 +552,11 @@
     </section>
 
     <!-- ================= SKILLS ================= -->
-    <section class="block alt" id="skills">
+    <section class="block" id="skills">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow" data-i18n="skills.eyebrow">Toolbox</span>
+            <span class="eyebrow"><span class="eyebrow-num">06</span> <span data-i18n="skills.eyebrow">Toolbox</span></span>
             <h2 data-i18n="skills.title">Skills</h2>
           </div>
           <p data-i18n="skills.sub">What I reach for, from the training cluster down to the URDF.</p>
@@ -609,11 +591,11 @@
     </section>
 
     <!-- ================= RESEARCH & EDUCATION ================= -->
-    <section class="block" id="research">
+    <section class="block alt" id="research">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow" data-i18n="res.eyebrow">Research &amp; education</span>
+            <span class="eyebrow"><span class="eyebrow-num">07</span> <span data-i18n="res.eyebrow">Research &amp; education</span></span>
             <h2 data-i18n="res.title">Publications, degrees, recognition</h2>
           </div>
         </div>
@@ -665,7 +647,7 @@
     </section>
 
     <!-- ================= CONTACT ================= -->
-    <section class="block alt" id="contact">
+    <section class="block" id="contact">
       <div class="container">
         <div class="contact reveal">
           <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
