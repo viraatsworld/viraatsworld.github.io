@@ -25,7 +25,7 @@ window.I18N_DE = {
   'hero.status': 'Offen für Stellen in Robot Learning &amp; Robotik · umzugsbereit',
   'hero.role': '<strong>Robotics Software Engineer</strong> — Reinforcement Learning · Sim2Real · Bewegungsplanung',
   'cta.contact': 'Kontakt aufnehmen',
-  'cta.cv': 'Lebenslauf herunterladen',
+  'cta.cv': 'Lebenslauf ansehen',
   'hero.hint': 'Zeiger bewegen zum Steuern ↗',
 
   'facts.yrs': 'Jahre',

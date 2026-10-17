@@ -8,7 +8,7 @@ Site available in English and German (?lang=de).
 - Email: viraatsaaran@gmail.com
 - Phone: +49 15567111159
 - GitHub: https://github.com/viraatsworld
-- CV: https://viraatsworld.github.io/assets/cv/Viraat_Saaran_CV.pdf
+- CV: https://drive.google.com/file/d/1E-PbDVGFRCXdPBhN7hja7vxbTHTLTPji/view?usp=sharing
 
 ## Experience
 - Master's Thesis, Adaptive RL for Constrained Motion Planning of Robotic Manipulators, Fraunhofer IPA (09/2026 to present): SAC/PPO in Isaac Sim / Isaac Lab and MuJoCo; reward shaping, curricula, domain randomization; sim-to-real via system identification, observation noise and latency modelling; benchmarked against RRT* and trajectory optimization; Newton vs PhysX.
