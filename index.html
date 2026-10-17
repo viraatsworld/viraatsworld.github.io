@@ -103,9 +103,9 @@
         <li><a href="#work" data-i18n="nav.work">Work</a></li>
         <li><a href="#focus" data-i18n="nav.focus">Focus</a></li>
         <li><a href="#stack" data-i18n="nav.stack">Sim &amp; Planning</a></li>
-        <li><a href="#research" data-i18n="nav.research">Research</a></li>
-        <li><a href="#hardware" data-i18n="nav.hardware">Hardware</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#hardware" data-i18n="nav.hardware">Hardware</a></li>
+        <li><a href="#research" data-i18n="nav.research">Research</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
@@ -125,33 +125,32 @@
   </header>
 
   <main id="main">
-    <!-- ================= INTRO ================= -->
+    <!-- ================= INTRO: who I am + proof ================= -->
     <section class="hero" id="top">
       <div class="container">
-        <div class="hero-grid hero-about">
+        <div class="hero-grid hero-pitch">
           <div>
-            <p class="role-line" data-i18n="hero.roleline">Robotics software engineer · robot learning</p>
-            <h1>Viraat Saaran</h1>
-            <div class="bio">
-              <p class="headline" data-i18n="hero.p1">I build robot manipulation systems that learn, and I care most about the gap between simulation and the real robot.</p>
-              <p data-i18n="hero.p2">
-                My focus areas are reinforcement learning for constrained, contact-rich manipulation in NVIDIA Isaac Sim
-                and MuJoCo, motion planning with MoveIt and CuRobo, and perception that keeps working under real lighting.
-                Most weeks move between a simulator, a ROS 2 stack and a robot cell.
-              </p>
-              <p data-i18n="hero.p3">
-                I have a computer science background (B.Tech in India, M.Sc. at the University of Stuttgart) and have spent
-                2.5+ years at Fraunhofer IPA bringing up ROS 2 systems on Denso Cobotta, UR5e and Yaskawa GP7 arms. Before
-                that I worked at Tata Consultancy Services and published two papers on machine learning.
-              </p>
+            <span class="status"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="hero.status">Open to robot learning &amp; robotics roles · open to relocation</span></span>
+            <div class="name-row">
+              <img class="avatar" src="assets/img/viraat.jpg" width="88" height="88" alt="Portrait of Viraat Saaran" decoding="async" fetchpriority="high">
+              <div>
+                <h1>Viraat Saaran</h1>
+                <p class="role" data-i18n="hero.role"><strong>Robotics Software Engineer</strong> · Robot Learning · Motion Planning</p>
+              </div>
             </div>
+            <p class="headline" data-i18n="hero.p1">I build robot manipulation systems that learn, and I make them work outside the simulator.</p>
+            <p class="bio-short" data-i18n="hero.bio">
+              2.5+ years at Fraunhofer IPA: reinforcement learning in Isaac Sim and MuJoCo, motion planning with MoveIt and
+              CuRobo, YOLOv8 perception, and bring-up on Denso Cobotta, UR5e and Yaskawa GP7 arms. M.Sc. Computer Science
+              at the University of Stuttgart, with a thesis on sim-to-real RL.
+            </p>
 
             <div class="hero-ctas">
-              <a class="btn btn-primary" href="mailto:viraatsaaran@gmail.com">
-                <svg aria-hidden="true"><use href="#i-mail"/></svg> <span data-i18n="cta.contact">Get in touch</span>
-              </a>
-              <a class="btn btn-ghost" href="https://drive.google.com/file/d/1E-PbDVGFRCXdPBhN7hja7vxbTHTLTPji/view?usp=sharing" target="_blank" rel="noopener">
+              <a class="btn btn-primary" href="https://drive.google.com/file/d/1E-PbDVGFRCXdPBhN7hja7vxbTHTLTPji/view?usp=sharing" target="_blank" rel="noopener">
                 <svg aria-hidden="true"><use href="#i-external"/></svg> <span data-i18n="cta.cv">View CV</span>
+              </a>
+              <a class="btn btn-ghost" href="mailto:viraatsaaran@gmail.com">
+                <svg aria-hidden="true"><use href="#i-mail"/></svg> <span data-i18n="cta.contact">Get in touch</span>
               </a>
               <!-- TODO: add LinkedIn URL -->
               <a class="icon-btn" href="#" data-todo="linkedin" aria-label="LinkedIn profile" style="width:46px;height:46px">
@@ -161,26 +160,38 @@
                 <svg aria-hidden="true"><use href="#i-github"/></svg>
               </a>
             </div>
+
+            <div class="hero-meta">
+              <span><svg aria-hidden="true"><use href="#i-pin"/></svg> <span data-i18n="hero.location">Stuttgart, Germany</span></span>
+              <a href="tel:+4915567111159"><svg aria-hidden="true"><use href="#i-phone"/></svg> +49 15567111159</a>
+              <span><svg aria-hidden="true"><use href="#i-chat"/></svg> <span data-i18n="hero.langs">English · Hindi · German (A2)</span></span>
+            </div>
           </div>
 
-          <aside class="profile-card" aria-label="Profile">
-            <img class="portrait" src="assets/img/viraat.jpg" width="260" height="260" alt="Portrait of Viraat Saaran in a navy suit" decoding="async" fetchpriority="high">
-            <dl>
-              <div><dt data-i18n="about.based">Based in</dt><dd data-i18n="about.based.d">Stuttgart, Germany, open to relocation</dd></div>
-              <div><dt data-i18n="hero.phone">Phone</dt><dd><a href="tel:+4915567111159">+49 15567111159</a></dd></div>
-              <div><dt>Email</dt><dd><a href="mailto:viraatsaaran@gmail.com">viraatsaaran@gmail.com</a></dd></div>
-              <div><dt data-i18n="about.langs">Languages</dt><dd data-i18n="about.langs.d">Hindi (native) · English (professional) · German (A2, improving)</dd></div>
-            </dl>
-          </aside>
+          <figure class="proof">
+            <div class="media media-portrait">
+              <!-- Plays like a GIF (muted, looping) but ~4x smaller than assets/img/nuremberg-messe.gif -->
+              <video id="messe-video" src="assets/video/nuremberg-messe.mp4" poster="assets/img/nuremberg-messe-poster.jpg"
+                autoplay muted loop playsinline preload="metadata" width="720" height="960"
+                aria-label="Live demo at Nuremberg Messe 2025: a UR5e and a Yaskawa GP7 pick coloured LEGO bricks and stack them, sped up 2.2x">
+                <img src="assets/img/nuremberg-messe.gif" alt="Live demo at Nuremberg Messe 2025: robot arms picking and stacking coloured LEGO bricks">
+              </video>
+              <span class="media-tag"><span class="live-dot" aria-hidden="true"></span> Nuremberg Messe 2025 · 2.2×</span>
+            </div>
+            <figcaption data-i18n="hero.proof">The LEGO pick-and-place cell I worked on, running live for trade-fair visitors. <a href="#p-lego">How it works ↓</a></figcaption>
+          </figure>
+        </div>
+
+        <div class="facts reveal">
+          <div class="fact"><b>2.5+ <span data-i18n="facts.yrs">yrs</span></b><span data-i18n="facts.yrs.d">robotics R&amp;D at Fraunhofer IPA</span></div>
+          <div class="fact"><b>3 + 3</b><span data-i18n="facts.hw.d">industrial arms and grippers brought up</span></div>
+          <div class="fact"><b data-i18n="facts.demo">Live demo</b><span data-i18n="facts.demo.d">autonomous pick-and-place at Nuremberg Messe 2025</span></div>
+          <div class="fact"><b>2</b><span data-i18n="facts.pubs.d">peer-reviewed publications (IGI Global, Springer)</span></div>
         </div>
 
         <div class="currently reveal">
           <span class="currently-label"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="cur.t">Currently</span></span>
-          <p data-i18n="cur.d">
-            Writing my master's thesis at Fraunhofer IPA: training RL policies for constrained pick-and-place in a confined
-            work cell, and working out how far system identification, observation noise and latency modelling can close
-            the reality gap. I'm also looking for my next role in robot learning or robotics software.
-          </p>
+          <p data-i18n="cur.d">Master's thesis at Fraunhofer IPA: RL policies for constrained pick-and-place, and closing the sim-to-real gap with system identification, observation noise and latency modelling.</p>
         </div>
       </div>
     </section>
@@ -195,23 +206,18 @@
         <!-- Headline project -->
         <article class="feature feature-portrait reveal" aria-labelledby="p-lego">
           <div class="media media-portrait">
-            <!-- Plays like a GIF (muted, looping) but ~4x smaller than assets/img/nuremberg-messe.gif -->
-            <video id="messe-video" src="assets/video/nuremberg-messe.mp4" poster="assets/img/nuremberg-messe-poster.jpg"
-              autoplay muted loop playsinline preload="metadata" width="720" height="960"
-              aria-label="Live demo at Nuremberg Messe 2025: a UR5e and a Yaskawa GP7 pick coloured LEGO bricks and stack them, sped up 2.2x">
-              <img src="assets/img/nuremberg-messe.gif" alt="Live demo at Nuremberg Messe 2025: robot arms picking and stacking coloured LEGO bricks">
-            </video>
-            <span class="media-tag">Nuremberg Messe 2025 · live · 2.2×</span>
+            <img src="assets/img/nuremberg-messe-poster.jpg" width="720" height="960" loading="lazy" alt="The LEGO pick-and-place cell at Nuremberg Messe 2025, with a UR5e arm over the brick table">
+            <span class="media-tag">Nuremberg Messe 2025</span>
           </div>
           <div class="feature-body">
-            <span class="kicker" data-i18n="lego.kicker">2025 · Fraunhofer IPA · public demo</span>
+            <span class="badge" data-i18n="lego.kicker">● Headline project · 2025 · Fraunhofer IPA</span>
             <h3 id="p-lego" data-i18n="lego.title">LEGO Pose Estimation at Nuremberg Messe</h3>
             <p data-i18n="lego.d">
               An end-to-end ROS 2 pipeline that sees LEGO bricks with an Intel RealSense camera, estimates their pose and
               sorts them by colour with a robot arm. Perception, Behavior Trees and robot control run in one loop, fully
               dockerized, as a continuous public demonstration at Nuremberg Messe 2025.
             </p>
-            <div class="stat"><b data-i18n="lego.stat">Live</b><span data-i18n="lego.stat.d">run continuously in front of trade-fair visitors</span></div>
+            <p class="result"><b data-i18n="ui.result">Result</b> <span data-i18n="lego.res">Ran continuously as a public demo in front of trade-fair visitors.</span></p>
             <ul class="tags" aria-label="Technologies">
               <li>ROS 2</li><li>Intel RealSense</li><li>Behavior Trees</li><li>Docker</li><li>Hand-eye calibration</li>
             </ul>
@@ -232,9 +238,9 @@
               <p data-i18n="thesis.d">
                 RL policies (SAC/PPO) for contact-rich pick-and-place inside a confined work cell, trained in Isaac Sim /
                 Isaac Lab and MuJoCo with reward shaping, curricula and domain randomization. The sim-to-real side covers
-                system identification, observation noise and latency modelling, and the policies are benchmarked against
-                RRT* and trajectory optimization.
+                system identification, observation noise and latency modelling.
               </p>
+              <p class="result"><b data-i18n="ui.result">Result</b> <span data-i18n="thesis.res">In progress: learned policies benchmarked against RRT* and trajectory optimization.</span></p>
               <ul class="tags" aria-label="Technologies">
                 <li>Isaac Lab</li><li>MuJoCo</li><li>SAC/PPO</li><li>Newton · PhysX</li><li>PyTorch</li>
               </ul>
@@ -253,9 +259,9 @@
               <h3 id="p-dpp">Dynamic Path Planning</h3>
               <p data-i18n="dpp.d">
                 A ROS 2 dynamic path-planning system integrating Gazebo, Isaac Sim, MoveIt and CuRobo with topic-based
-                controllers. I compared planner behaviour across simulators to find where planned trajectories diverged on
-                real hardware.
+                controllers. I compared planner behaviour across simulators and against the real robot.
               </p>
+              <p class="result"><b data-i18n="ui.result">Result</b> <span data-i18n="dpp.res">Pinpointed where planned trajectories diverged between simulation and real hardware.</span></p>
               <ul class="tags" aria-label="Technologies">
                 <li>MoveIt</li><li>CuRobo</li><li>Gazebo</li><li>Isaac Sim</li><li>ROS 2</li>
               </ul>
@@ -280,6 +286,7 @@
                 <li data-i18n="vision.p5">Grasp</li>
                 <li data-i18n="vision.p6">Retrain on failures</li>
               </ol>
+              <p class="result"><b data-i18n="ui.result">Result</b> <span data-i18n="vision.res">More robust detection under changing lighting and object placement.</span></p>
               <ul class="tags" aria-label="Technologies">
                 <li>YOLOv8</li><li>PyTorch</li><li>Intel RealSense</li><li>ROS 2</li>
               </ul>
@@ -295,6 +302,7 @@
                 I handled dataset preparation, distributed fine-tuning on cloud GPU clusters, and benchmarking against the
                 base model.
               </p>
+              <p class="result"><b data-i18n="ui.result">Result</b> <span data-i18n="math.res">A benchmark of the fine-tuned model against the base model.</span></p>
               <ul class="tags" aria-label="Technologies">
                 <li>GPT-2</li><li>PyTorch</li><li>Cloud GPUs</li>
               </ul>
@@ -408,96 +416,11 @@
       </div>
     </section>
 
-    <!-- ================= 04 RESEARCH & PUBLICATIONS ================= -->
-    <section class="block alt" id="research">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2><span class="sec-num">04</span> <span data-i18n="res.title">Research &amp; publications</span></h2>
-        </div>
-        <ul class="entry-list reveal">
-          <li>
-            <a class="entry-link" href="#p-thesis">
-              <span class="entry-year" data-i18n="res.ongoing">Ongoing</span>
-              <span class="entry-main"><b data-i18n="res.thesis.t">Adaptive RL for Constrained Motion Planning of Robotic Manipulators</b><span data-i18n="res.thesis.d">Master's thesis · Fraunhofer IPA · reinforcement learning, sim-to-real</span></span>
-              <span class="entry-arrow" aria-hidden="true">↓</span>
-            </a>
-          </li>
-          <li>
-            <a class="entry-link" href="https://doi.org/10.4018/978-1-7998-3327-7.ch002" target="_blank" rel="noopener">
-              <span class="entry-year">2021</span>
-              <span class="entry-main"><b>Reconstruction of 2D Images Into 3D</b><span data-i18n="res.p1.d">Peer-reviewed publication · IGI Global · computer vision</span></span>
-              <span class="entry-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-          <li>
-            <a class="entry-link" href="https://doi.org/10.1007/978-981-33-6981-8_18" target="_blank" rel="noopener">
-              <span class="entry-year">2020</span>
-              <span class="entry-main"><b>A Literature Review on GANs with Applications in Healthcare</b><span data-i18n="res.p2.d">Peer-reviewed publication · Springer · generative models</span></span>
-              <span class="entry-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ================= 05 HARDWARE ================= -->
-    <section class="block" id="hardware">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2><span class="sec-num">05</span> <span data-i18n="hw.title">Robots and grippers I've brought up</span></h2>
-          <p data-i18n="hw.sub">URDF models, controllers and hardware interfaces, from simulation to the real cell.</p>
-        </div>
-
-        <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-arm"/></svg><span data-i18n="hw.robots">Manipulators</span></h3>
-        <div class="hw-cards">
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/ur5e.jpg" width="596" height="640" loading="lazy" decoding="async" alt="Universal Robots UR5e collaborative robot arm"></div>
-            <figcaption><b>Universal Robots UR5e</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.ur5e">Picked LEGO bricks in the live demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
-          </figure>
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/yaskawa-gp7.jpg" width="640" height="636" loading="lazy" decoding="async" alt="Yaskawa Motoman GP7 industrial robot arm"></div>
-            <figcaption><b>Yaskawa GP7</b><span class="hw-src" data-i18n="hw.cat.ind">Industrial robot</span><span data-i18n="hw.gp7">Stacked bricks in the same demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
-          </figure>
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/denso-cobotta.jpg" width="632" height="640" loading="lazy" alt="Denso Cobotta compact collaborative robot arm"></div>
-            <figcaption><b>Denso Cobotta 900</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.cobotta">URDF authoring, gripper integration and topic-based controllers.</span></figcaption>
-          </figure>
-        </div>
-
-        <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-grip"/></svg><span data-i18n="hw.grippers">Grippers</span></h3>
-        <div class="hw-cards">
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/robotiq-2f-85.jpg" width="640" height="640" loading="lazy" alt="Robotiq 2F-85 adaptive two-finger gripper"></div>
-            <figcaption><b>Robotiq 2F-85</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.2f85">Adaptive two-finger gripper.</span></figcaption>
-          </figure>
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/onrobot-rg6.jpg" width="469" height="640" loading="lazy" alt="OnRobot RG6 two-finger gripper"></div>
-            <figcaption><b>OnRobot RG6</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.rg6">Long-stroke two-finger gripper.</span></figcaption>
-          </figure>
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/schunk-egp.jpg" width="390" height="640" loading="lazy" alt="Schunk EGP electric parallel gripper"></div>
-            <figcaption><b>Schunk EGP</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.egp">Compact electric parallel gripper.</span></figcaption>
-          </figure>
-        </div>
-
-        <div class="grip-work reveal">
-          <h3 data-i18n="hw.work.t">My gripper integration work</h3>
-          <ul>
-            <li data-i18n="hw.work.1">Added the grippers to the robot models by authoring and modifying URDF.</li>
-            <li data-i18n="hw.work.2">Wired them into ROS 2 with topic-based controllers and hardware interfaces (ros2_control).</li>
-            <li data-i18n="hw.work.3">Closed the loop from vision-model output to grasp execution under real lighting and placement variation.</li>
-            <li data-i18n="hw.work.4">Tested them end to end in robot cells, after hand-eye calibration and frame alignment.</li>
-          </ul>
-          <p class="grip-also"><span data-i18n="hw.also">Also worked with:</span> ROX omnidirectional platform · Intel RealSense D435</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 06 EXPERIENCE ================= -->
+    <!-- ================= 04 EXPERIENCE ================= -->
     <section class="block alt" id="experience">
       <div class="container">
         <div class="section-head reveal">
-          <h2><span class="sec-num">06</span> <span data-i18n="exp.title">Experience</span></h2>
+          <h2><span class="sec-num">04</span> <span data-i18n="exp.title">Experience</span></h2>
         </div>
 
         <ol class="xp reveal">
@@ -559,6 +482,91 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 HARDWARE ================= -->
+    <section class="block" id="hardware">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><span class="sec-num">05</span> <span data-i18n="hw.title">Robots and grippers I've brought up</span></h2>
+          <p data-i18n="hw.sub">URDF models, controllers and hardware interfaces, from simulation to the real cell.</p>
+        </div>
+
+        <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-arm"/></svg><span data-i18n="hw.robots">Manipulators</span></h3>
+        <div class="hw-cards">
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/ur5e.jpg" width="596" height="640" loading="lazy" decoding="async" alt="Universal Robots UR5e collaborative robot arm"></div>
+            <figcaption><b>Universal Robots UR5e</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.ur5e">Picked LEGO bricks in the live demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
+          </figure>
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/yaskawa-gp7.jpg" width="640" height="636" loading="lazy" decoding="async" alt="Yaskawa Motoman GP7 industrial robot arm"></div>
+            <figcaption><b>Yaskawa GP7</b><span class="hw-src" data-i18n="hw.cat.ind">Industrial robot</span><span data-i18n="hw.gp7">Stacked bricks in the same demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
+          </figure>
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/denso-cobotta.jpg" width="632" height="640" loading="lazy" alt="Denso Cobotta compact collaborative robot arm"></div>
+            <figcaption><b>Denso Cobotta 900</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.cobotta">URDF authoring, gripper integration and topic-based controllers.</span></figcaption>
+          </figure>
+        </div>
+
+        <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-grip"/></svg><span data-i18n="hw.grippers">Grippers</span></h3>
+        <div class="hw-cards">
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/robotiq-2f-85.jpg" width="640" height="640" loading="lazy" alt="Robotiq 2F-85 adaptive two-finger gripper"></div>
+            <figcaption><b>Robotiq 2F-85</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.2f85">Adaptive two-finger gripper.</span></figcaption>
+          </figure>
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/onrobot-rg6.jpg" width="469" height="640" loading="lazy" alt="OnRobot RG6 two-finger gripper"></div>
+            <figcaption><b>OnRobot RG6</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.rg6">Long-stroke two-finger gripper.</span></figcaption>
+          </figure>
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/schunk-egp.jpg" width="390" height="640" loading="lazy" alt="Schunk EGP electric parallel gripper"></div>
+            <figcaption><b>Schunk EGP</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.egp">Compact electric parallel gripper.</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="grip-work reveal">
+          <h3 data-i18n="hw.work.t">My gripper integration work</h3>
+          <ul>
+            <li data-i18n="hw.work.1">Added the grippers to the robot models by authoring and modifying URDF.</li>
+            <li data-i18n="hw.work.2">Wired them into ROS 2 with topic-based controllers and hardware interfaces (ros2_control).</li>
+            <li data-i18n="hw.work.3">Closed the loop from vision-model output to grasp execution under real lighting and placement variation.</li>
+            <li data-i18n="hw.work.4">Tested them end to end in robot cells, after hand-eye calibration and frame alignment.</li>
+          </ul>
+          <p class="grip-also"><span data-i18n="hw.also">Also worked with:</span> ROX omnidirectional platform · Intel RealSense D435</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 06 RESEARCH & PUBLICATIONS ================= -->
+    <section class="block alt" id="research">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><span class="sec-num">06</span> <span data-i18n="res.title">Research &amp; publications</span></h2>
+        </div>
+        <ul class="entry-list reveal">
+          <li>
+            <a class="entry-link" href="#p-thesis">
+              <span class="entry-year" data-i18n="res.ongoing">Ongoing</span>
+              <span class="entry-main"><b data-i18n="res.thesis.t">Adaptive RL for Constrained Motion Planning of Robotic Manipulators</b><span data-i18n="res.thesis.d">Master's thesis · Fraunhofer IPA · reinforcement learning, sim-to-real</span></span>
+              <span class="entry-arrow" aria-hidden="true">↓</span>
+            </a>
+          </li>
+          <li>
+            <a class="entry-link" href="https://doi.org/10.4018/978-1-7998-3327-7.ch002" target="_blank" rel="noopener">
+              <span class="entry-year">2021</span>
+              <span class="entry-main"><b>Reconstruction of 2D Images Into 3D</b><span data-i18n="res.p1.d">Peer-reviewed publication · IGI Global · computer vision</span></span>
+              <span class="entry-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a class="entry-link" href="https://doi.org/10.1007/978-981-33-6981-8_18" target="_blank" rel="noopener">
+              <span class="entry-year">2020</span>
+              <span class="entry-main"><b>A Literature Review on GANs with Applications in Healthcare</b><span data-i18n="res.p2.d">Peer-reviewed publication · Springer · generative models</span></span>
+              <span class="entry-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
