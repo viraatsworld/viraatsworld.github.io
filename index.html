@@ -100,13 +100,12 @@
         <span>Viraat Saaran</span>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#top" data-i18n="nav.about">About</a></li>
-        <li><a href="#loop" data-i18n="nav.approach">Approach</a></li>
-        <li><a href="#stack" data-i18n="nav.stack">Sim &amp; Planning</a></li>
         <li><a href="#work" data-i18n="nav.work">Work</a></li>
+        <li><a href="#focus" data-i18n="nav.focus">Focus</a></li>
+        <li><a href="#stack" data-i18n="nav.stack">Sim &amp; Planning</a></li>
+        <li><a href="#research" data-i18n="nav.research">Research</a></li>
         <li><a href="#hardware" data-i18n="nav.hardware">Hardware</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
@@ -126,26 +125,24 @@
   </header>
 
   <main id="main">
-    <!-- ================= HERO ================= -->
+    <!-- ================= INTRO ================= -->
     <section class="hero" id="top">
       <div class="container">
         <div class="hero-grid hero-about">
           <div>
-            <span class="status"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="hero.status">Open to robot learning &amp; robotics roles · open to relocation</span></span>
+            <p class="role-line" data-i18n="hero.roleline">Robotics software engineer · robot learning</p>
             <h1>Viraat Saaran</h1>
-            <p class="role" data-i18n="hero.role"><strong>Robotics Software Engineer</strong> — Reinforcement Learning · Sim2Real · Motion Planning</p>
-            <p class="headline" data-i18n="about.lead">I train policies in simulation and make them work on real robots.</p>
             <div class="bio">
-              <p data-i18n="about.p1">
-                I'm a robotics engineer with a computer science (AI) background. For 2.5+ years at Fraunhofer IPA I've
-                worked across the whole model lifecycle: rosbag and synthetic dataset creation, YOLOv8 training, and
-                reinforcement learning policies in NVIDIA Isaac Sim and MuJoCo. Around those models I build ROS 2
-                manipulation systems end to end: simulation in Gazebo and Isaac Sim, motion planning with MoveIt and
-                CuRobo, robot modelling in URDF, and bring-up on Denso Cobotta, UR5e and Yaskawa GP7 arms.
+              <p class="headline" data-i18n="hero.p1">I build robot manipulation systems that learn, and I care most about the gap between simulation and the real robot.</p>
+              <p data-i18n="hero.p2">
+                My focus areas are reinforcement learning for constrained, contact-rich manipulation in NVIDIA Isaac Sim
+                and MuJoCo, motion planning with MoveIt and CuRobo, and perception that keeps working under real lighting.
+                Most weeks move between a simulator, a ROS 2 stack and a robot cell.
               </p>
-              <p data-i18n="about.p2">
-                I demonstrated a live autonomous pick-and-place cell at Nuremberg Messe 2025, and I'm now doing my
-                master's thesis on sim-to-real reinforcement learning for constrained motion planning.
+              <p data-i18n="hero.p3">
+                I have a computer science background (B.Tech in India, M.Sc. at the University of Stuttgart) and have spent
+                2.5+ years at Fraunhofer IPA bringing up ROS 2 systems on Denso Cobotta, UR5e and Yaskawa GP7 arms. Before
+                that I worked at Tata Consultancy Services and published two papers on machine learning.
               </p>
             </div>
 
@@ -168,87 +165,191 @@
 
           <aside class="profile-card" aria-label="Profile">
             <img class="portrait" src="assets/img/viraat.jpg" width="260" height="260" alt="Portrait of Viraat Saaran in a navy suit" decoding="async" fetchpriority="high">
-            <div class="currently">
-              <span class="currently-label"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="hero.currently.t">Currently</span></span>
-              <p data-i18n="hero.currently.d">Master's thesis on sim-to-real RL for constrained motion planning at Fraunhofer IPA, Stuttgart.</p>
-            </div>
             <dl>
               <div><dt data-i18n="about.based">Based in</dt><dd data-i18n="about.based.d">Stuttgart, Germany, open to relocation</dd></div>
               <div><dt data-i18n="hero.phone">Phone</dt><dd><a href="tel:+4915567111159">+49 15567111159</a></dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:viraatsaaran@gmail.com">viraatsaaran@gmail.com</a></dd></div>
               <div><dt data-i18n="about.langs">Languages</dt><dd data-i18n="about.langs.d">Hindi (native) · English (professional) · German (A2, improving)</dd></div>
             </dl>
           </aside>
         </div>
 
-        <div class="facts reveal">
-          <div class="fact"><b>2.5+ <span data-i18n="facts.yrs">yrs</span></b><span data-i18n="facts.yrs.d">at Fraunhofer IPA, from dataset to deployed robot</span></div>
-          <div class="fact"><b>Sim → Real</b><span data-i18n="facts.sim.d">RL in Isaac Sim &amp; MuJoCo, planning in MoveIt &amp; CuRobo</span></div>
-          <div class="fact"><b data-i18n="facts.demo">Live demo</b><span data-i18n="facts.demo.d">Autonomous pick-and-place at Nuremberg Messe 2025</span></div>
-          <div class="fact"><b>3 + 3</b><span data-i18n="facts.hw.d">industrial arms and gripper families integrated</span></div>
+        <div class="currently reveal">
+          <span class="currently-label"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="cur.t">Currently</span></span>
+          <p data-i18n="cur.d">
+            Writing my master's thesis at Fraunhofer IPA: training RL policies for constrained pick-and-place in a confined
+            work cell, and working out how far system identification, observation noise and latency modelling can close
+            the reality gap. I'm also looking for my next role in robot learning or robotics software.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ================= MODEL -> ROBOT LOOP ================= -->
-    <section class="block alt" id="loop">
+    <!-- ================= 01 FEATURED PROJECTS ================= -->
+    <section class="block" id="work">
       <div class="container">
         <div class="section-head reveal">
-          <div>
-            <span class="eyebrow"><span class="eyebrow-num">01</span> <span data-i18n="loop.eyebrow">How I work</span></span>
-            <h2 data-i18n="loop.title">From dataset to deployed robot</h2>
-          </div>
-          <p data-i18n="loop.sub">I own the whole loop, and it closes on the real robot, not in a notebook.</p>
+          <h2><span class="sec-num">01</span> <span data-i18n="work.title">Featured projects</span></h2>
         </div>
-        <ol class="loop">
-          <li class="reveal">
-            <h3 data-i18n="loop.1.t">Capture data</h3>
-            <p data-i18n="loop.1.d">Datasets from recorded rosbags and synthetic data generated in simulation.</p>
-            <div class="tools">rosbags · RealSense · Isaac Sim</div>
-          </li>
-          <li class="reveal">
-            <h3 data-i18n="loop.2.t">Train</h3>
-            <p data-i18n="loop.2.d">RL policies (SAC/PPO) with shaped rewards and curricula, plus detection and pose models.</p>
-            <div class="tools">PyTorch · YOLOv8 · SAC/PPO</div>
-          </li>
-          <li class="reveal">
-            <h3 data-i18n="loop.3.t">Validate in sim</h3>
-            <p data-i18n="loop.3.d">Domain randomization and repeatable testing before any hardware trial.</p>
-            <div class="tools">Isaac Sim · MuJoCo · Gazebo</div>
-          </li>
-          <li class="reveal">
-            <h3 data-i18n="loop.4.t">Plan &amp; orchestrate</h3>
-            <p data-i18n="loop.4.d">Motion planning plus Behavior Trees for execution and failure recovery.</p>
-            <div class="tools">MoveIt · CuRobo · BTs</div>
-          </li>
-          <li class="reveal">
-            <h3 data-i18n="loop.5.t">Deploy on the cell</h3>
-            <p data-i18n="loop.5.d">Hand-eye calibration, bring-up and live inference on real arms.</p>
-            <div class="tools">ros2_control · Docker · CI/CD</div>
-          </li>
-        </ol>
-        <div class="loop-return-wrap reveal" aria-hidden="true">
-          <svg class="loop-return" viewBox="0 0 760 34" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M745 2 V18 Q745 30 733 30 H27 Q15 30 15 18 V8" stroke-dasharray="5 5"/>
-            <path d="M9 13 L15 4 L21 13"/>
-          </svg>
-          <span class="loop-return-label" data-i18n="loop.return">retrain on failures observed on the robot</span>
+
+        <!-- Headline project -->
+        <article class="feature feature-portrait reveal" aria-labelledby="p-lego">
+          <div class="media media-portrait">
+            <!-- Plays like a GIF (muted, looping) but ~4x smaller than assets/img/nuremberg-messe.gif -->
+            <video id="messe-video" src="assets/video/nuremberg-messe.mp4" poster="assets/img/nuremberg-messe-poster.jpg"
+              autoplay muted loop playsinline preload="metadata" width="720" height="960"
+              aria-label="Live demo at Nuremberg Messe 2025: a UR5e and a Yaskawa GP7 pick coloured LEGO bricks and stack them, sped up 2.2x">
+              <img src="assets/img/nuremberg-messe.gif" alt="Live demo at Nuremberg Messe 2025: robot arms picking and stacking coloured LEGO bricks">
+            </video>
+            <span class="media-tag">Nuremberg Messe 2025 · live · 2.2×</span>
+          </div>
+          <div class="feature-body">
+            <span class="kicker" data-i18n="lego.kicker">2025 · Fraunhofer IPA · public demo</span>
+            <h3 id="p-lego" data-i18n="lego.title">LEGO Pose Estimation at Nuremberg Messe</h3>
+            <p data-i18n="lego.d">
+              An end-to-end ROS 2 pipeline that sees LEGO bricks with an Intel RealSense camera, estimates their pose and
+              sorts them by colour with a robot arm. Perception, Behavior Trees and robot control run in one loop, fully
+              dockerized, as a continuous public demonstration at Nuremberg Messe 2025.
+            </p>
+            <div class="stat"><b data-i18n="lego.stat">Live</b><span data-i18n="lego.stat.d">run continuously in front of trade-fair visitors</span></div>
+            <ul class="tags" aria-label="Technologies">
+              <li>ROS 2</li><li>Intel RealSense</li><li>Behavior Trees</li><li>Docker</li><li>Hand-eye calibration</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="projects projects-2">
+          <article class="card reveal" aria-labelledby="p-thesis">
+            <div class="media">
+              <!-- TODO: add clip of an RL policy training/rolling out in Isaac Sim or MuJoCo -->
+              <div class="placeholder" role="img" aria-label="Placeholder: video of an RL policy in Isaac Sim">
+                <div><svg aria-hidden="true"><use href="#i-film"/></svg>Video: RL policy in Isaac Sim</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="kicker" data-i18n="thesis.kicker">2026 – present · Research · Master's thesis</span>
+              <h3 id="p-thesis" data-i18n="thesis.title">Adaptive RL for Constrained Motion Planning</h3>
+              <p data-i18n="thesis.d">
+                RL policies (SAC/PPO) for contact-rich pick-and-place inside a confined work cell, trained in Isaac Sim /
+                Isaac Lab and MuJoCo with reward shaping, curricula and domain randomization. The sim-to-real side covers
+                system identification, observation noise and latency modelling, and the policies are benchmarked against
+                RRT* and trajectory optimization.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Isaac Lab</li><li>MuJoCo</li><li>SAC/PPO</li><li>Newton · PhysX</li><li>PyTorch</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal" aria-labelledby="p-dpp">
+            <div class="media">
+              <!-- TODO: add GIF comparing planned trajectories across simulators -->
+              <div class="placeholder" role="img" aria-label="Placeholder: GIF of dynamic path planning across simulators">
+                <div><svg aria-hidden="true"><use href="#i-film"/></svg>GIF: Dynamic Path Planning</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="kicker" data-i18n="dpp.kicker">Project · Motion planning</span>
+              <h3 id="p-dpp">Dynamic Path Planning</h3>
+              <p data-i18n="dpp.d">
+                A ROS 2 dynamic path-planning system integrating Gazebo, Isaac Sim, MoveIt and CuRobo with topic-based
+                controllers. I compared planner behaviour across simulators to find where planned trajectories diverged on
+                real hardware.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>MoveIt</li><li>CuRobo</li><li>Gazebo</li><li>Isaac Sim</li><li>ROS 2</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal" aria-labelledby="p-vision">
+            <div class="card-body">
+              <span class="kicker" data-i18n="vision.kicker">2024 – 2026 · Fraunhofer IPA · Perception</span>
+              <h3 id="p-vision" data-i18n="vision.title">Vision models, from dataset to robot cell</h3>
+              <p data-i18n="vision.d">
+                YOLOv8 detection and pose-estimation models for robot cells: datasets from recorded rosbags, training and
+                evaluation, then live inference on Intel RealSense depth streams driving real grasps on Denso Cobotta, UR5e
+                and Yaskawa GP7. Failure cases seen on the robot went back into the dataset for retraining, which made
+                detection more robust to changing lighting and object placement.
+              </p>
+              <ol class="pipeline" aria-label="Pipeline stages">
+                <li>rosbags</li>
+                <li data-i18n="vision.p2">Dataset</li>
+                <li>YOLOv8</li>
+                <li data-i18n="vision.p4">Live inference</li>
+                <li data-i18n="vision.p5">Grasp</li>
+                <li data-i18n="vision.p6">Retrain on failures</li>
+              </ol>
+              <ul class="tags" aria-label="Technologies">
+                <li>YOLOv8</li><li>PyTorch</li><li>Intel RealSense</li><li>ROS 2</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal" aria-labelledby="p-mathgpt">
+            <div class="card-body">
+              <span class="kicker" data-i18n="math.kicker">2025 · LLM research</span>
+              <h3 id="p-mathgpt">MathGPT</h3>
+              <p data-i18n="math.d">
+                Fine-tuned a GPT-2-based model on a mathematical reasoning dataset to study where LLM reasoning breaks down.
+                I handled dataset preparation, distributed fine-tuning on cloud GPU clusters, and benchmarking against the
+                base model.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>GPT-2</li><li>PyTorch</li><li>Cloud GPUs</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ================= SIMULATION & MOTION PLANNING ================= -->
+    <!-- ================= 02 WHAT I WORK ON ================= -->
+    <section class="block alt" id="focus">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><span class="sec-num">02</span> <span data-i18n="focus.title">What I work on</span></h2>
+          <p data-i18n="focus.sub">Four areas I keep coming back to, usually several in the same project.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="focus reveal">
+            <svg aria-hidden="true"><use href="#i-brain"/></svg>
+            <h3 data-i18n="focus.1.t">Robot learning &amp; sim-to-real</h3>
+            <p data-i18n="focus.1.d">Training RL policies (SAC/PPO) in Isaac Sim, Isaac Lab and MuJoCo, shaping rewards and curricula, and using domain randomization, system identification and latency modelling so they transfer to a physical arm.</p>
+            <div class="tools">Isaac Lab · MuJoCo · PyTorch · SAC/PPO</div>
+          </article>
+          <article class="focus reveal">
+            <svg aria-hidden="true"><use href="#i-route"/></svg>
+            <h3 data-i18n="focus.2.t">Motion planning &amp; simulation</h3>
+            <p data-i18n="focus.2.d">Planning with MoveIt and CuRobo, building simulation-to-motion-planning workflows in Gazebo and Isaac Sim, and comparing learned policies with classical planners like RRT*.</p>
+            <div class="tools">MoveIt · CuRobo · Gazebo · Isaac Sim · URDF</div>
+          </article>
+          <article class="focus reveal">
+            <svg aria-hidden="true"><use href="#i-cube"/></svg>
+            <h3 data-i18n="focus.3.t">Perception</h3>
+            <p data-i18n="focus.3.d">YOLOv8 object detection and pose estimation on RealSense depth streams, from dataset creation to live inference in a running cell.</p>
+            <div class="tools">YOLOv8 · Intel RealSense · rosbags</div>
+          </article>
+          <article class="focus reveal">
+            <svg aria-hidden="true"><use href="#i-arm"/></svg>
+            <h3 data-i18n="focus.4.t">Robot integration &amp; deployment</h3>
+            <p data-i18n="focus.4.d">URDF models, gripper integration, ros2_control and topic-based controllers, hand-eye calibration and cell bring-up, with Behavior Trees for task logic and Docker plus CI/CD to keep it reproducible.</p>
+            <div class="tools">ros2_control · Behavior Trees · Docker · CI/CD</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 SIMULATION & MOTION PLANNING ================= -->
     <section class="block" id="stack">
       <div class="container">
         <div class="section-head reveal">
-          <div>
-            <span class="eyebrow"><span class="eyebrow-num">02</span> <span data-i18n="stack.eyebrow">Simulation &amp; motion planning</span></span>
-            <h2 data-i18n="stack.title">Proven in simulation before it touches hardware</h2>
-          </div>
-          <p data-i18n="stack.sub">I test every idea in simulation first, then check where it breaks on hardware.</p>
+          <h2><span class="sec-num">03</span> <span data-i18n="stack.title">Simulation &amp; motion planning</span></h2>
+          <p data-i18n="stack.sub">The simulators and planners I use, and what I use each one for.</p>
         </div>
 
         <div class="stack-demo reveal">
-            <figure class="cell" style="margin:0">
+          <figure class="cell" style="margin:0">
             <div class="cell-bar" aria-hidden="true">
               <span class="dots"><i></i><i></i><i></i></span>
               <span>pick_and_place · colour sort</span>
@@ -307,125 +408,43 @@
       </div>
     </section>
 
-    <!-- ================= SELECTED WORK ================= -->
-    <section class="block alt" id="work">
+    <!-- ================= 04 RESEARCH & PUBLICATIONS ================= -->
+    <section class="block alt" id="research">
       <div class="container">
         <div class="section-head reveal">
-          <div>
-            <span class="eyebrow"><span class="eyebrow-num">03</span> <span data-i18n="work.eyebrow">Selected work</span></span>
-            <h2 data-i18n="work.title">Robots that leave the simulator</h2>
-          </div>
-          <p data-i18n="work.sub">Perception, planning and learning, taken all the way to hardware.</p>
+          <h2><span class="sec-num">04</span> <span data-i18n="res.title">Research &amp; publications</span></h2>
         </div>
-
-        <!-- Headline project -->
-        <article class="feature feature-portrait reveal" aria-labelledby="p-lego">
-          <div class="media media-portrait">
-            <!-- Plays like a GIF (muted, looping) but ~4x smaller than assets/img/nuremberg-messe.gif -->
-            <video id="messe-video" src="assets/video/nuremberg-messe.mp4" poster="assets/img/nuremberg-messe-poster.jpg"
-              autoplay muted loop playsinline preload="metadata" width="720" height="960"
-              aria-label="Live demo at Nuremberg Messe 2025: a UR5e and a Yaskawa GP7 pick coloured LEGO bricks and stack them, sped up 2.2x">
-              <img src="assets/img/nuremberg-messe.gif" alt="Live demo at Nuremberg Messe 2025: robot arms picking and stacking coloured LEGO bricks">
-            </video>
-            <span class="media-tag">Nuremberg Messe 2025 · live · 2.2×</span>
-          </div>
-          <div class="feature-body">
-            <span class="badge" data-i18n="lego.badge">● Headline project · 2025</span>
-            <h3 id="p-lego" data-i18n="lego.title">LEGO Pose Estimation — Nuremberg Messe 2025</h3>
-            <p data-i18n="lego.d">
-              An end-to-end ROS 2 pipeline that sees LEGO bricks with an Intel RealSense camera, estimates their pose,
-              and sorts them by colour with a robot arm: perception, Behavior Trees and robot control in one loop.
-              Fully dockerized and run continuously as a public demonstration at Nuremberg Messe 2025.
-            </p>
-            <ol class="pipeline" aria-label="Pipeline stages">
-              <li>RealSense depth</li>
-              <li data-i18n="lego.p2">Pose estimation</li>
-              <li>Behavior Tree</li>
-              <li data-i18n="lego.p4">Robot control</li>
-              <li>Pick &amp; place</li>
-            </ol>
-            <ul class="tags" aria-label="Technologies">
-              <li>ROS 2</li><li>Intel RealSense</li><li>Behavior Trees</li><li>Docker</li><li>Hand-eye calibration</li>
-            </ul>
-          </div>
-        </article>
-
-        <div class="projects">
-          <article class="card reveal" aria-labelledby="p-thesis">
-            <div class="media">
-              <!-- TODO: add clip of an RL policy training/rolling out in Isaac Sim or MuJoCo -->
-              <div class="placeholder" role="img" aria-label="Placeholder: video of an RL policy in Isaac Sim">
-                <div><svg aria-hidden="true"><use href="#i-film"/></svg>Video: RL policy in Isaac Sim</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="kicker" data-i18n="thesis.kicker">Master's thesis · 2026 – present</span>
-              <h3 id="p-thesis" data-i18n="thesis.title">Adaptive RL for Constrained Motion Planning</h3>
-              <ul class="points">
-                <li data-i18n="thesis.1">SAC/PPO policies for contact-rich pick-and-place in a confined work cell</li>
-                <li data-i18n="thesis.2">Reward shaping, curricula and domain randomization</li>
-                <li data-i18n="thesis.3">Sim-to-real: system identification, observation noise, latency modelling</li>
-                <li data-i18n="thesis.4">Benchmarked against RRT* and trajectory optimization; Newton vs PhysX</li>
-              </ul>
-              <ul class="tags" aria-label="Technologies">
-                <li>Isaac Lab</li><li>MuJoCo</li><li>SAC/PPO</li><li>PyTorch</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="card reveal" aria-labelledby="p-dpp">
-            <div class="media">
-              <!-- TODO: add GIF comparing planned trajectories across simulators -->
-              <div class="placeholder" role="img" aria-label="Placeholder: GIF of dynamic path planning across simulators">
-                <div><svg aria-hidden="true"><use href="#i-film"/></svg>GIF: Dynamic Path Planning</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="kicker">ROS 2 · sim-to-real</span>
-              <h3 id="p-dpp">Dynamic Path Planning</h3>
-              <p data-i18n="dpp.d">
-                A ROS 2 dynamic path-planning system integrating Gazebo, Isaac Sim, MoveIt and CuRobo with
-                topic-based controllers. Compared planner behaviour across simulators to find where planned
-                trajectories diverged on real hardware.
-              </p>
-              <ul class="tags" aria-label="Technologies">
-                <li>MoveIt</li><li>CuRobo</li><li>Gazebo</li><li>Isaac Sim</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="card reveal" aria-labelledby="p-mathgpt">
-            <div class="media">
-              <!-- TODO: add an image (e.g. evaluation plot or sample outputs) -->
-              <div class="placeholder" role="img" aria-label="Placeholder: image for MathGPT">
-                <div><svg aria-hidden="true"><use href="#i-film"/></svg>Image: MathGPT evaluation</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="kicker" data-i18n="math.kicker">LLM fine-tuning · 2025</span>
-              <h3 id="p-mathgpt">MathGPT</h3>
-              <p data-i18n="math.d">
-                Fine-tuned a GPT-2-based model on a mathematical reasoning dataset to study where LLM reasoning
-                breaks down: dataset preparation, distributed fine-tuning on cloud GPU clusters, and benchmarking
-                against the base model.
-              </p>
-              <ul class="tags" aria-label="Technologies">
-                <li>GPT-2</li><li>PyTorch</li><li>Cloud GPUs</li>
-              </ul>
-            </div>
-          </article>
-        </div>
+        <ul class="entry-list reveal">
+          <li>
+            <a class="entry-link" href="#p-thesis">
+              <span class="entry-year" data-i18n="res.ongoing">Ongoing</span>
+              <span class="entry-main"><b data-i18n="res.thesis.t">Adaptive RL for Constrained Motion Planning of Robotic Manipulators</b><span data-i18n="res.thesis.d">Master's thesis · Fraunhofer IPA · reinforcement learning, sim-to-real</span></span>
+              <span class="entry-arrow" aria-hidden="true">↓</span>
+            </a>
+          </li>
+          <li>
+            <a class="entry-link" href="https://doi.org/10.4018/978-1-7998-3327-7.ch002" target="_blank" rel="noopener">
+              <span class="entry-year">2021</span>
+              <span class="entry-main"><b>Reconstruction of 2D Images Into 3D</b><span data-i18n="res.p1.d">Peer-reviewed publication · IGI Global · computer vision</span></span>
+              <span class="entry-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a class="entry-link" href="https://doi.org/10.1007/978-981-33-6981-8_18" target="_blank" rel="noopener">
+              <span class="entry-year">2020</span>
+              <span class="entry-main"><b>A Literature Review on GANs with Applications in Healthcare</b><span data-i18n="res.p2.d">Peer-reviewed publication · Springer · generative models</span></span>
+              <span class="entry-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- ================= HARDWARE ================= -->
+    <!-- ================= 05 HARDWARE ================= -->
     <section class="block" id="hardware">
       <div class="container">
         <div class="section-head reveal">
-          <div>
-            <span class="eyebrow"><span class="eyebrow-num">04</span> <span data-i18n="hw.eyebrow">Hardware</span></span>
-            <h2 data-i18n="hw.title">Robots and grippers I've brought up</h2>
-          </div>
+          <h2><span class="sec-num">05</span> <span data-i18n="hw.title">Robots and grippers I've brought up</span></h2>
           <p data-i18n="hw.sub">URDF models, controllers and hardware interfaces, from simulation to the real cell.</p>
         </div>
 
@@ -474,93 +493,80 @@
       </div>
     </section>
 
-    <!-- ================= EXPERIENCE ================= -->
+    <!-- ================= 06 EXPERIENCE ================= -->
     <section class="block alt" id="experience">
       <div class="container">
         <div class="section-head reveal">
-          <div>
-            <span class="eyebrow"><span class="eyebrow-num">05</span> <span data-i18n="exp.eyebrow">Experience</span></span>
-            <h2 data-i18n="exp.title">Where I've built things</h2>
-          </div>
-          <p data-i18n="exp.sub">Research on learning-based control, built on years of robots running in real cells.</p>
+          <h2><span class="sec-num">06</span> <span data-i18n="exp.title">Experience</span></h2>
         </div>
 
-        <ol class="timeline">
-          <li class="tl-item current reveal">
-            <div class="tl-head">
-              <h3 data-i18n="exp.thesis.t">Master's Thesis — Adaptive RL for Constrained Motion Planning of Robotic Manipulators</h3>
-              <span class="tl-date" data-i18n="exp.thesis.date">09/2026 – present</span>
-            </div>
-            <p class="tl-org">Fraunhofer IPA · Stuttgart</p>
-            <div class="tl-body">
-              <ul>
-                <li data-i18n="exp.thesis.1">Designing and training reinforcement learning policies for constrained, contact-rich pick-and-place inside a confined robotic work cell.</li>
-                <li data-i18n="exp.thesis.2">Training and evaluating policies in NVIDIA Isaac Sim / Isaac Lab and MuJoCo; shaping reward functions and training curricula, and applying domain randomization to improve sample efficiency and policy robustness.</li>
-                <li data-i18n="exp.thesis.3">Researching sim-to-real transfer (system identification, observation noise and latency modelling) to close the reality gap on a physical manipulator.</li>
-                <li data-i18n="exp.thesis.4">Benchmarking learned policies against classical planners (RRT*, trajectory optimization) and evaluating physics-engine backends (Newton, PhysX) for training throughput.</li>
-              </ul>
-              <ul class="tags" aria-label="Technologies">
-                <li>RL (SAC/PPO)</li><li>Sim-to-Real</li><li>Domain Randomization</li><li>Reward Shaping</li><li>Isaac Sim</li><li>Isaac Lab</li><li>MuJoCo</li><li>Newton</li><li>PhysX</li><li>RRT*</li><li>PyTorch</li>
-              </ul>
-            </div>
+        <ol class="xp reveal">
+          <li class="xp-item">
+            <span class="xp-date" data-i18n="exp.thesis.date">09/2026 – present</span>
+            <b data-i18n="exp.thesis.t">Master's Thesis · Fraunhofer IPA</b>
+            <p data-i18n="exp.thesis.d">Adaptive RL for constrained motion planning of robotic manipulators, from Isaac Sim and MuJoCo training to sim-to-real transfer on a physical arm.</p>
           </li>
-
-          <li class="tl-item reveal">
-            <div class="tl-head">
-              <h3 data-i18n="exp.ra.t">Research Assistant (Wiss. Hilfskraft)</h3>
-              <span class="tl-date">03/2024 – 08/2026</span>
-            </div>
-            <p class="tl-org">Fraunhofer IPA · Stuttgart</p>
-            <div class="tl-body">
+          <li class="xp-item">
+            <span class="xp-date">03/2024 – 08/2026</span>
+            <b data-i18n="exp.ra.t">Research Assistant (Wiss. Hilfskraft) · Fraunhofer IPA</b>
+            <p data-i18n="exp.ra.d">Built ROS 2 manipulation systems end to end: simulation and motion planning, URDF and gripper integration, YOLOv8 perception, hand-eye calibration and robot-cell deployment, including the Nuremberg Messe 2025 demo.</p>
+            <details class="xp-more">
+              <summary data-i18n="exp.more">More detail</summary>
               <ul>
                 <li data-i18n="exp.ra.1"><b>Simulation &amp; motion planning</b>: built simulation-to-motion-planning workflows in Gazebo, NVIDIA Isaac Sim, MoveIt and CuRobo to generate training data and validate policies before real-world deployment; modelled robots in URDF and bridged simulation to ROS 2.</li>
                 <li data-i18n="exp.ra.2"><b>Perception &amp; dataset pipelines</b>: ROS 2 perception pipelines with YOLOv8 for object detection and pose estimation on Intel RealSense depth streams; datasets from recorded rosbags, imitation learning, and ownership of training, evaluation and live inference.</li>
                 <li data-i18n="exp.ra.3"><b>Model deployment on hardware</b>: deployed trained vision models into running robot cells on Denso Cobotta 900, UR5e and Yaskawa GP7, closing the loop from model output to grasp execution under real lighting and placement variation.</li>
-                <li data-i18n="exp.ra.4"><b>Evaluation &amp; iteration</b>: ran dataset expansion and retraining cycles against failure cases seen on hardware, improving detection robustness under changing lighting and object placement.</li>
                 <li data-i18n="exp.ra.5"><b>Robot modelling &amp; control</b>: URDF authoring, gripper integration (Robotiq 2F-85, OnRobot RG6, Schunk EGP), topic-based controllers and hardware interfacing across all three arms.</li>
                 <li data-i18n="exp.ra.6"><b>Robot cell deployment</b>: cell setup, hand-eye calibration and frame alignment, hardware integration and end-to-end testing, including the vision-driven pick-and-place system shown live at Nuremberg Messe 2025.</li>
                 <li data-i18n="exp.ra.7"><b>Orchestration &amp; MLOps</b>: Behavior Trees for autonomous execution, decision-making and failure recovery; Docker and CI/CD (GitLab, GitHub Actions) for reproducible builds, training runs, testing and deployment.</li>
               </ul>
-              <ul class="tags" aria-label="Technologies">
-                <li>PyTorch</li><li>YOLOv8</li><li>Isaac Sim</li><li>Gazebo</li><li>MoveIt</li><li>CuRobo</li><li>ROS 2</li><li>ros2_control</li><li>URDF</li><li>Behavior Trees</li><li>Docker</li><li>CI/CD</li>
-              </ul>
-            </div>
+            </details>
           </li>
-
-          <li class="tl-item reveal">
-            <div class="tl-head">
-              <h3>Assistant System Engineer</h3>
-              <span class="tl-date">08/2021 – 03/2023</span>
-            </div>
-            <p class="tl-org" data-i18n="exp.tcs.org">Tata Consultancy Services · India</p>
-            <div class="tl-body compact">
-              <p data-i18n="exp.tcs.d">Agile delivery team: Database Administrator, later Java Developer on a ServiceNow-based enterprise platform.</p>
-            </div>
+          <li class="xp-item">
+            <span class="xp-date">08/2021 – 03/2023</span>
+            <b data-i18n="exp.tcs.t">Assistant System Engineer · Tata Consultancy Services, India</b>
+            <p data-i18n="exp.tcs.d">Agile delivery team: Database Administrator, later Java Developer on a ServiceNow-based enterprise platform.</p>
           </li>
-
-          <li class="tl-item reveal">
-            <div class="tl-head">
-              <h3>R&amp;D Machine Learning Intern</h3>
-              <span class="tl-date">05/2020 – 09/2020</span>
-            </div>
-            <p class="tl-org">E-bibil Technologies · Remote</p>
-            <div class="tl-body compact">
-              <p data-i18n="exp.ebibil.d">Built an ML model and supporting API for YOLO-based object detection as part of a confidential R&amp;D project.</p>
-            </div>
+          <li class="xp-item">
+            <span class="xp-date">05/2020 – 09/2020</span>
+            <b data-i18n="exp.ebibil.t">R&amp;D Machine Learning Intern · E-bibil Technologies (remote)</b>
+            <p data-i18n="exp.ebibil.d">Built an ML model and supporting API for YOLO-based object detection as part of a confidential R&amp;D project.</p>
           </li>
         </ol>
+
+        <div class="two-col edu-row">
+          <div class="reveal">
+            <h3 class="sub-h" data-i18n="res.edu">Education</h3>
+            <ol class="xp">
+              <li class="xp-item">
+                <!-- TODO: confirm expected end date (robotics CV says 2027, AI CV says Dec 2026) -->
+                <span class="xp-date" data-i18n="res.msc.date">04/2023 – 2027 (expected)</span>
+                <b data-i18n="res.msc">M.Sc. Computer Science · University of Stuttgart</b>
+                <p data-i18n="res.msc.focus">Focus: Autonomous Systems, Robotics, ML</p>
+              </li>
+              <li class="xp-item">
+                <span class="xp-date">2017 – 2021</span>
+                <b data-i18n="res.btech">B.Tech Computer Science · Dr. A.P.J. Abdul Kalam Technical University, India</b>
+              </li>
+            </ol>
+          </div>
+          <div class="reveal">
+            <h3 class="sub-h" data-i18n="res.ach">Recognition</h3>
+            <ul class="chips">
+              <li data-i18n="res.ach.1">Smart India Hackathon <small>National Finalist</small></li>
+              <li data-i18n="res.ach.2">Microsoft MTA 98-381 <small>Certified Python Programmer</small></li>
+              <li data-i18n="res.ach.3">2 peer-reviewed publications</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ================= SKILLS ================= -->
+    <!-- ================= 07 SKILLS ================= -->
     <section class="block" id="skills">
       <div class="container">
         <div class="section-head reveal">
-          <div>
-            <span class="eyebrow"><span class="eyebrow-num">06</span> <span data-i18n="skills.eyebrow">Toolbox</span></span>
-            <h2 data-i18n="skills.title">Skills</h2>
-          </div>
-          <p data-i18n="skills.sub">What I reach for, from the training cluster down to the URDF.</p>
+          <h2><span class="sec-num">07</span> <span data-i18n="skills.title">Toolbox</span></h2>
         </div>
         <div class="skills">
           <div class="skill-group reveal" data-group="ml">
@@ -591,67 +597,10 @@
       </div>
     </section>
 
-    <!-- ================= RESEARCH & EDUCATION ================= -->
-    <section class="block alt" id="research">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="eyebrow"><span class="eyebrow-num">07</span> <span data-i18n="res.eyebrow">Research &amp; education</span></span>
-            <h2 data-i18n="res.title">Publications, degrees, recognition</h2>
-          </div>
-        </div>
-        <div class="two-col">
-          <div class="panel reveal">
-            <h3 data-i18n="res.pubs">Publications</h3>
-            <div class="entry">
-              <h4>Reconstruction of 2D Images Into 3D</h4>
-              <p>IGI Global · 2021</p>
-              <a class="doi" href="https://doi.org/10.4018/978-1-7998-3327-7.ch002">doi:10.4018/978-1-7998-3327-7.ch002</a>
-            </div>
-            <div class="entry">
-              <h4>A Literature Review on GANs with Applications in Healthcare</h4>
-              <p>Springer · 2020</p>
-              <a class="doi" href="https://doi.org/10.1007/978-981-33-6981-8_18">doi:10.1007/978-981-33-6981-8_18</a>
-            </div>
-          </div>
-          <div class="panel reveal">
-            <h3 data-i18n="res.edu">Education</h3>
-            <div class="entry">
-              <h4 data-i18n="res.msc">M.Sc. Computer Science</h4>
-              <!-- TODO: confirm expected end date (robotics CV says 2027, AI CV says Dec 2026) -->
-              <p data-i18n="res.msc.d">University of Stuttgart · 04/2023 – 2027 (expected)</p>
-              <p data-i18n="res.msc.focus">Focus: Autonomous Systems, Robotics, ML</p>
-            </div>
-            <div class="entry">
-              <h4 data-i18n="res.btech">B.Tech Computer Science</h4>
-              <p data-i18n="res.btech.d">Dr. A.P.J. Abdul Kalam Technical University, India · 2017 – 2021</p>
-            </div>
-          </div>
-          <div class="panel reveal">
-            <h3 data-i18n="res.ach">Achievements</h3>
-            <ul class="chips">
-              <li data-i18n="res.ach.1">Smart India Hackathon <small>National Finalist</small></li>
-              <li data-i18n="res.ach.2">Microsoft MTA 98-381 <small>Certified Python Programmer</small></li>
-              <li data-i18n="res.ach.3">2 peer-reviewed publications</li>
-            </ul>
-          </div>
-          <div class="panel reveal">
-            <h3 data-i18n="res.langs">Languages</h3>
-            <ul class="chips">
-              <li data-i18n="res.lang.hi">Hindi <small>native</small></li>
-              <li data-i18n="res.lang.en">English <small>professional</small></li>
-              <li data-i18n="res.lang.de">German <small>A2, improving</small></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ================= CONTACT ================= -->
-    <section class="block" id="contact">
+    <section class="block alt" id="contact">
       <div class="container">
         <div class="contact reveal">
-          <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
           <h2 data-i18n="contact.title">Training robots that work in the real world? Let's talk.</h2>
           <p data-i18n="contact.d">
             I'm looking for robot learning, simulation, motion planning and robotics software roles. Based in
