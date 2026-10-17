@@ -1,6 +1,6 @@
 /* German translations. Keys match data-i18n attributes in index.html; English lives in the HTML itself. */
 window.I18N_DE = {
-  "meta.title": "Viraat Saaran — Robotics Software Engineer (Reinforcement Learning · Sim2Real · Bewegungsplanung)",
+  "meta.title": "Viraat Saaran",
   "ui.copied": "E-Mail-Adresse kopiert: ",
   "ui.toEn": "Show in English",
   "ui.toDe": "Auf Deutsch anzeigen",
