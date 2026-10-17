@@ -100,11 +100,11 @@
         <span>Viraat Saaran</span>
       </a>
       <ul class="nav-links" id="nav-links">
+        <li><a href="#hardware" data-i18n="nav.hardware">Hardware</a></li>
         <li><a href="#work" data-i18n="nav.work">Work</a></li>
         <li><a href="#focus" data-i18n="nav.focus">Focus</a></li>
         <li><a href="#stack" data-i18n="nav.stack">Sim &amp; Planning</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-        <li><a href="#hardware" data-i18n="nav.hardware">Hardware</a></li>
         <li><a href="#research" data-i18n="nav.research">Research</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
@@ -184,7 +184,7 @@
 
         <div class="facts reveal">
           <div class="fact"><b>2.5+ <span data-i18n="facts.yrs">yrs</span></b><span data-i18n="facts.yrs.d">robotics R&amp;D at Fraunhofer IPA</span></div>
-          <div class="fact"><b>3 + 3</b><span data-i18n="facts.hw.d">industrial arms and grippers brought up</span></div>
+          <div class="fact"><b>3 + 3</b><span data-i18n="facts.hw.d">industrial arms and grippers I bring up</span></div>
           <div class="fact"><b data-i18n="facts.demo">Live demo</b><span data-i18n="facts.demo.d">autonomous pick-and-place at Nuremberg Messe 2025</span></div>
           <div class="fact"><b>2</b><span data-i18n="facts.pubs.d">peer-reviewed publications (IGI Global, Springer)</span></div>
         </div>
@@ -196,11 +196,64 @@
       </div>
     </section>
 
-    <!-- ================= 01 FEATURED PROJECTS ================= -->
-    <section class="block" id="work">
+    <!-- ================= 01 HARDWARE ================= -->
+    <section class="block" id="hardware">
       <div class="container">
         <div class="section-head reveal">
-          <h2><span class="sec-num">01</span> <span data-i18n="work.title">Featured projects</span></h2>
+          <h2><span class="sec-num">01</span> <span data-i18n="hw.title">Robots and grippers I bring up</span></h2>
+          <p data-i18n="hw.sub">URDF models, controllers and hardware interfaces, from simulation to the real cell.</p>
+        </div>
+
+        <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-arm"/></svg><span data-i18n="hw.robots">Manipulators</span></h3>
+        <div class="hw-cards">
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/ur5e.jpg" width="596" height="640" loading="lazy" decoding="async" alt="Universal Robots UR5e collaborative robot arm"></div>
+            <figcaption><b>Universal Robots UR5e</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.ur5e">Picked LEGO bricks in the live demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
+          </figure>
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/yaskawa-gp7.jpg" width="640" height="636" loading="lazy" decoding="async" alt="Yaskawa Motoman GP7 industrial robot arm"></div>
+            <figcaption><b>Yaskawa GP7</b><span class="hw-src" data-i18n="hw.cat.ind">Industrial robot</span><span data-i18n="hw.gp7">Stacked bricks in the same demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
+          </figure>
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/denso-cobotta.jpg" width="632" height="640" loading="lazy" alt="Denso Cobotta compact collaborative robot arm"></div>
+            <figcaption><b>Denso Cobotta 900</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.cobotta">URDF authoring, gripper integration and topic-based controllers.</span></figcaption>
+          </figure>
+        </div>
+
+        <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-grip"/></svg><span data-i18n="hw.grippers">Grippers</span></h3>
+        <div class="hw-cards">
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/robotiq-2f-85.jpg" width="640" height="640" loading="lazy" alt="Robotiq 2F-85 adaptive two-finger gripper"></div>
+            <figcaption><b>Robotiq 2F-85</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.2f85">Adaptive two-finger gripper.</span></figcaption>
+          </figure>
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/onrobot-rg6.jpg" width="469" height="640" loading="lazy" alt="OnRobot RG6 two-finger gripper"></div>
+            <figcaption><b>OnRobot RG6</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.rg6">Long-stroke two-finger gripper.</span></figcaption>
+          </figure>
+          <figure class="hw-card reveal">
+            <div class="hw-media"><img src="assets/img/hardware/schunk-egp.jpg" width="390" height="640" loading="lazy" alt="Schunk EGP electric parallel gripper"></div>
+            <figcaption><b>Schunk EGP</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.egp">Compact electric parallel gripper.</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="grip-work reveal">
+          <h3 data-i18n="hw.work.t">My gripper integration work</h3>
+          <ul>
+            <li data-i18n="hw.work.1">Added the grippers to the robot models by authoring and modifying URDF.</li>
+            <li data-i18n="hw.work.2">Wired them into ROS 2 with topic-based controllers and hardware interfaces (ros2_control).</li>
+            <li data-i18n="hw.work.3">Closed the loop from vision-model output to grasp execution under real lighting and placement variation.</li>
+            <li data-i18n="hw.work.4">Tested them end to end in robot cells, after hand-eye calibration and frame alignment.</li>
+          </ul>
+          <p class="grip-also"><span data-i18n="hw.also">Also worked with:</span> ROX omnidirectional platform · Intel RealSense D435</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 FEATURED PROJECTS ================= -->
+    <section class="block alt" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><span class="sec-num">02</span> <span data-i18n="work.title">Featured projects</span></h2>
         </div>
 
         <!-- Headline project -->
@@ -312,11 +365,11 @@
       </div>
     </section>
 
-    <!-- ================= 02 WHAT I WORK ON ================= -->
-    <section class="block alt" id="focus">
+    <!-- ================= 03 WHAT I WORK ON ================= -->
+    <section class="block" id="focus">
       <div class="container">
         <div class="section-head reveal">
-          <h2><span class="sec-num">02</span> <span data-i18n="focus.title">What I work on</span></h2>
+          <h2><span class="sec-num">03</span> <span data-i18n="focus.title">What I work on</span></h2>
           <p data-i18n="focus.sub">Four areas I keep coming back to, usually several in the same project.</p>
         </div>
         <div class="focus-grid">
@@ -348,11 +401,11 @@
       </div>
     </section>
 
-    <!-- ================= 03 SIMULATION & MOTION PLANNING ================= -->
-    <section class="block" id="stack">
+    <!-- ================= 04 SIMULATION & MOTION PLANNING ================= -->
+    <section class="block alt" id="stack">
       <div class="container">
         <div class="section-head reveal">
-          <h2><span class="sec-num">03</span> <span data-i18n="stack.title">Simulation &amp; motion planning</span></h2>
+          <h2><span class="sec-num">04</span> <span data-i18n="stack.title">Simulation &amp; motion planning</span></h2>
           <p data-i18n="stack.sub">The simulators and planners I use, and what I use each one for.</p>
         </div>
 
@@ -416,11 +469,11 @@
       </div>
     </section>
 
-    <!-- ================= 04 EXPERIENCE ================= -->
-    <section class="block alt" id="experience">
+    <!-- ================= 05 EXPERIENCE ================= -->
+    <section class="block" id="experience">
       <div class="container">
         <div class="section-head reveal">
-          <h2><span class="sec-num">04</span> <span data-i18n="exp.title">Experience</span></h2>
+          <h2><span class="sec-num">05</span> <span data-i18n="exp.title">Experience</span></h2>
         </div>
 
         <ol class="xp reveal">
@@ -481,59 +534,6 @@
               <li data-i18n="res.ach.3">2 peer-reviewed publications</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 05 HARDWARE ================= -->
-    <section class="block" id="hardware">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2><span class="sec-num">05</span> <span data-i18n="hw.title">Robots and grippers I've brought up</span></h2>
-          <p data-i18n="hw.sub">URDF models, controllers and hardware interfaces, from simulation to the real cell.</p>
-        </div>
-
-        <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-arm"/></svg><span data-i18n="hw.robots">Manipulators</span></h3>
-        <div class="hw-cards">
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/ur5e.jpg" width="596" height="640" loading="lazy" decoding="async" alt="Universal Robots UR5e collaborative robot arm"></div>
-            <figcaption><b>Universal Robots UR5e</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.ur5e">Picked LEGO bricks in the live demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
-          </figure>
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/yaskawa-gp7.jpg" width="640" height="636" loading="lazy" decoding="async" alt="Yaskawa Motoman GP7 industrial robot arm"></div>
-            <figcaption><b>Yaskawa GP7</b><span class="hw-src" data-i18n="hw.cat.ind">Industrial robot</span><span data-i18n="hw.gp7">Stacked bricks in the same demo cell; URDF, controllers and hardware interfacing.</span></figcaption>
-          </figure>
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/denso-cobotta.jpg" width="632" height="640" loading="lazy" alt="Denso Cobotta compact collaborative robot arm"></div>
-            <figcaption><b>Denso Cobotta 900</b><span class="hw-src" data-i18n="hw.cat.cobot">Collaborative robot</span><span data-i18n="hw.cobotta">URDF authoring, gripper integration and topic-based controllers.</span></figcaption>
-          </figure>
-        </div>
-
-        <h3 class="hw-h reveal"><svg aria-hidden="true"><use href="#i-grip"/></svg><span data-i18n="hw.grippers">Grippers</span></h3>
-        <div class="hw-cards">
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/robotiq-2f-85.jpg" width="640" height="640" loading="lazy" alt="Robotiq 2F-85 adaptive two-finger gripper"></div>
-            <figcaption><b>Robotiq 2F-85</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.2f85">Adaptive two-finger gripper.</span></figcaption>
-          </figure>
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/onrobot-rg6.jpg" width="469" height="640" loading="lazy" alt="OnRobot RG6 two-finger gripper"></div>
-            <figcaption><b>OnRobot RG6</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.rg6">Long-stroke two-finger gripper.</span></figcaption>
-          </figure>
-          <figure class="hw-card reveal">
-            <div class="hw-media"><img src="assets/img/hardware/schunk-egp.jpg" width="390" height="640" loading="lazy" alt="Schunk EGP electric parallel gripper"></div>
-            <figcaption><b>Schunk EGP</b><span class="hw-src" data-i18n="hw.cat.grip">Gripper</span><span data-i18n="hw.egp">Compact electric parallel gripper.</span></figcaption>
-          </figure>
-        </div>
-
-        <div class="grip-work reveal">
-          <h3 data-i18n="hw.work.t">My gripper integration work</h3>
-          <ul>
-            <li data-i18n="hw.work.1">Added the grippers to the robot models by authoring and modifying URDF.</li>
-            <li data-i18n="hw.work.2">Wired them into ROS 2 with topic-based controllers and hardware interfaces (ros2_control).</li>
-            <li data-i18n="hw.work.3">Closed the loop from vision-model output to grasp execution under real lighting and placement variation.</li>
-            <li data-i18n="hw.work.4">Tested them end to end in robot cells, after hand-eye calibration and frame alignment.</li>
-          </ul>
-          <p class="grip-also"><span data-i18n="hw.also">Also worked with:</span> ROX omnidirectional platform · Intel RealSense D435</p>
         </div>
       </div>
     </section>
