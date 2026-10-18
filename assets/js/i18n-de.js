@@ -20,7 +20,7 @@ window.I18N_DE = {
   "cta.cv": "Lebenslauf ansehen",
   "cta.contact": "Kontakt aufnehmen",
   "hero.location": "Stuttgart, Deutschland",
-  "hero.langs": "Englisch · Hindi · Deutsch (A2)",
+  "hero.langs": "Englisch · Deutsch (A2)",
   "hero.proof": "Die LEGO-Pick-and-Place-Zelle, an der ich gearbeitet habe, live vor Messebesuchern. <a href=\"#p-lego\">So funktioniert sie ↓</a>",
   "facts.yrs": "Jahre",
   "facts.yrs.d": "Robotik-F&amp;E am Fraunhofer IPA",

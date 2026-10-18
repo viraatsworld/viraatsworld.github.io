@@ -61,7 +61,7 @@
       { "@type": "CollegeOrUniversity", "name": "Dr. A.P.J. Abdul Kalam Technical University" }
     ],
     "knowsAbout": ["Reinforcement Learning", "Sim-to-Real", "NVIDIA Isaac Sim", "Isaac Lab", "MuJoCo", "ROS 2", "ros2_control", "MoveIt", "CuRobo", "Motion Planning", "Gazebo", "URDF", "Behavior Trees", "PyTorch", "YOLOv8", "Computer Vision", "Hand-Eye Calibration", "Docker", "CI/CD"],
-    "knowsLanguage": ["hi", "en", "de"],
+    "knowsLanguage": ["en", "de"],
     "workLocation": "Stuttgart, Germany",
     "sameAs": ["https://github.com/viraatsworld"]
   }
@@ -102,9 +102,9 @@
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#hardware" data-i18n="nav.hardware">Hardware</a></li>
-        <li><a href="#work" data-i18n="nav.work">Work</a></li>
         <li><a href="#focus" data-i18n="nav.focus">Focus</a></li>
         <li><a href="#stack" data-i18n="nav.stack">Sim &amp; Planning</a></li>
+        <li><a href="#work" data-i18n="nav.work">Work</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
         <li><a href="#research" data-i18n="nav.research">Research</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
@@ -165,7 +165,7 @@
             <div class="hero-meta">
               <span><svg aria-hidden="true"><use href="#i-pin"/></svg> <span data-i18n="hero.location">Stuttgart, Germany</span></span>
               <a href="tel:+4915567111159"><svg aria-hidden="true"><use href="#i-phone"/></svg> +49 15567111159</a>
-              <span><svg aria-hidden="true"><use href="#i-chat"/></svg> <span data-i18n="hero.langs">English · Hindi · German (A2)</span></span>
+              <span><svg aria-hidden="true"><use href="#i-chat"/></svg> <span data-i18n="hero.langs">English · German (A2)</span></span>
             </div>
           </div>
 
@@ -250,11 +250,115 @@
       </div>
     </section>
 
-    <!-- ================= 02 FEATURED PROJECTS ================= -->
+    <!-- ================= 02 WHAT I WORK ON ================= -->
+    <section class="block alt" id="focus">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><span class="sec-num">02</span> <span data-i18n="focus.title">What I work on</span></h2>
+          <p data-i18n="focus.sub">Four areas I keep coming back to, usually several in the same project.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="focus reveal">
+            <svg aria-hidden="true"><use href="#i-brain"/></svg>
+            <h3 data-i18n="focus.1.t">Robot learning &amp; sim-to-real</h3>
+            <p data-i18n="focus.1.d">Training RL policies (SAC/PPO) in Isaac Sim, Isaac Lab and MuJoCo, shaping rewards and curricula, and using domain randomization, system identification and latency modelling so they transfer to a physical arm.</p>
+            <div class="tools">Isaac Lab · MuJoCo · PyTorch · SAC/PPO</div>
+          </article>
+          <article class="focus reveal">
+            <svg aria-hidden="true"><use href="#i-route"/></svg>
+            <h3 data-i18n="focus.2.t">Motion planning &amp; simulation</h3>
+            <p data-i18n="focus.2.d">Planning with MoveIt and CuRobo, building simulation-to-motion-planning workflows in Gazebo and Isaac Sim, and comparing learned policies with classical planners like RRT*.</p>
+            <div class="tools">MoveIt · CuRobo · Gazebo · Isaac Sim · URDF</div>
+          </article>
+          <article class="focus reveal">
+            <svg aria-hidden="true"><use href="#i-cube"/></svg>
+            <h3 data-i18n="focus.3.t">Perception</h3>
+            <p data-i18n="focus.3.d">YOLOv8 object detection and pose estimation on RealSense depth streams, from dataset creation to live inference in a running cell.</p>
+            <div class="tools">YOLOv8 · Intel RealSense · rosbags</div>
+          </article>
+          <article class="focus reveal">
+            <svg aria-hidden="true"><use href="#i-arm"/></svg>
+            <h3 data-i18n="focus.4.t">Robot integration &amp; deployment</h3>
+            <p data-i18n="focus.4.d">URDF models, gripper integration, ros2_control and topic-based controllers, hand-eye calibration and cell bring-up, with Behavior Trees for task logic and Docker plus CI/CD to keep it reproducible.</p>
+            <div class="tools">ros2_control · Behavior Trees · Docker · CI/CD</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 SIMULATION & MOTION PLANNING ================= -->
+    <section class="block" id="stack">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><span class="sec-num">03</span> <span data-i18n="stack.title">Simulation &amp; motion planning</span></h2>
+          <p data-i18n="stack.sub">The simulators and planners I use, and what I use each one for.</p>
+        </div>
+
+        <div class="stack-demo reveal">
+          <figure class="cell" style="margin:0">
+            <div class="cell-bar" aria-hidden="true">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span>pick_and_place · colour sort</span>
+              <span id="cell-mode">auto</span>
+            </div>
+            <canvas id="robot" width="600" height="408" role="img"
+              aria-label="Animated robot arm sorting coloured bricks into matching bins. Move your pointer over it to take control."></canvas>
+            <pre class="cell-hud" id="hud" aria-hidden="true">/joint_states</pre>
+            <span class="cell-hint" aria-hidden="true" data-i18n="hero.hint">move pointer to teleop ↗</span>
+            <figcaption class="visually-hidden">An interactive sketch of a colour-sorting pick-and-place cell, inspired by the LEGO demo at Nuremberg Messe 2025.</figcaption>
+          </figure>
+          <p class="stack-demo-note" data-i18n="stack.demo">A tiny planar sim of the Nuremberg task: inverse kinematics and a pick-and-place state machine, live in your browser. Move your pointer over it to take control.</p>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-col reveal">
+            <h3 class="stack-h"><svg aria-hidden="true"><use href="#i-cube"/></svg><span data-i18n="stack.sim">Simulation</span></h3>
+            <article class="tool">
+              <div class="tool-head"><h4>NVIDIA Isaac Sim · Isaac Lab</h4><span class="tool-tag" data-i18n="stack.tag.rl">RL training</span></div>
+              <p data-i18n="stack.isaac">Training and evaluating RL policies for contact-rich pick-and-place, with domain randomization for sim-to-real. Also used to generate training data and run simulation-to-motion-planning workflows bridged to ROS 2.</p>
+            </article>
+            <article class="tool">
+              <div class="tool-head"><h4>MuJoCo</h4><span class="tool-tag" data-i18n="stack.tag.rl">RL training</span></div>
+              <p data-i18n="stack.mujoco">A second physics engine for training and evaluating the thesis policies, with reward shaping and curricula.</p>
+            </article>
+            <article class="tool">
+              <div class="tool-head"><h4>Gazebo</h4><span class="tool-tag" data-i18n="stack.tag.ros">ROS 2 testing</span></div>
+              <p data-i18n="stack.gazebo">URDF robot models bridged to ROS 2 for repeatable testing of planning and control before hardware trials.</p>
+            </article>
+            <article class="tool">
+              <div class="tool-head"><h4>Newton · PhysX</h4><span class="tool-tag" data-i18n="stack.tag.phys">Physics backends</span></div>
+              <p data-i18n="stack.physics">Evaluating physics-engine backends for training throughput in the thesis.</p>
+            </article>
+          </div>
+
+          <div class="stack-col reveal">
+            <h3 class="stack-h"><svg aria-hidden="true"><use href="#i-route"/></svg><span data-i18n="stack.plan">Motion planning</span></h3>
+            <article class="tool">
+              <div class="tool-head"><h4>MoveIt</h4><span class="tool-tag" data-i18n="stack.tag.sim2hw">Sim &amp; hardware</span></div>
+              <p data-i18n="stack.moveit">Motion planning for ROS 2 manipulators in simulation and on real arms, as part of the simulation-to-motion-planning workflow.</p>
+            </article>
+            <article class="tool">
+              <div class="tool-head"><h4>CuRobo</h4><span class="tool-tag" data-i18n="stack.tag.sim2hw">Sim &amp; hardware</span></div>
+              <p data-i18n="stack.curobo">Integrated alongside MoveIt in the dynamic path-planning system, with topic-based controllers.</p>
+            </article>
+            <article class="tool">
+              <div class="tool-head"><h4>RRT* · <span data-i18n="stack.trajopt">trajectory optimization</span></h4><span class="tool-tag" data-i18n="stack.tag.base">Baselines</span></div>
+              <p data-i18n="stack.rrt">Classical planners I benchmark the learned RL policies against in my thesis.</p>
+            </article>
+            <div class="callout">
+              <b data-i18n="stack.callout.t">What I learned comparing them</b>
+              <p data-i18n="stack.callout.d">In the Dynamic Path Planning project I compared planner behaviour across Gazebo and Isaac Sim to find where planned trajectories diverged on real hardware. That is exactly the gap my sim-to-real thesis work targets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 FEATURED PROJECTS ================= -->
     <section class="block alt" id="work">
       <div class="container">
         <div class="section-head reveal">
-          <h2><span class="sec-num">02</span> <span data-i18n="work.title">Featured projects</span></h2>
+          <h2><span class="sec-num">04</span> <span data-i18n="work.title">Featured projects</span></h2>
         </div>
 
         <!-- Headline project -->
@@ -362,110 +466,6 @@
               </ul>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 03 WHAT I WORK ON ================= -->
-    <section class="block" id="focus">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2><span class="sec-num">03</span> <span data-i18n="focus.title">What I work on</span></h2>
-          <p data-i18n="focus.sub">Four areas I keep coming back to, usually several in the same project.</p>
-        </div>
-        <div class="focus-grid">
-          <article class="focus reveal">
-            <svg aria-hidden="true"><use href="#i-brain"/></svg>
-            <h3 data-i18n="focus.1.t">Robot learning &amp; sim-to-real</h3>
-            <p data-i18n="focus.1.d">Training RL policies (SAC/PPO) in Isaac Sim, Isaac Lab and MuJoCo, shaping rewards and curricula, and using domain randomization, system identification and latency modelling so they transfer to a physical arm.</p>
-            <div class="tools">Isaac Lab · MuJoCo · PyTorch · SAC/PPO</div>
-          </article>
-          <article class="focus reveal">
-            <svg aria-hidden="true"><use href="#i-route"/></svg>
-            <h3 data-i18n="focus.2.t">Motion planning &amp; simulation</h3>
-            <p data-i18n="focus.2.d">Planning with MoveIt and CuRobo, building simulation-to-motion-planning workflows in Gazebo and Isaac Sim, and comparing learned policies with classical planners like RRT*.</p>
-            <div class="tools">MoveIt · CuRobo · Gazebo · Isaac Sim · URDF</div>
-          </article>
-          <article class="focus reveal">
-            <svg aria-hidden="true"><use href="#i-cube"/></svg>
-            <h3 data-i18n="focus.3.t">Perception</h3>
-            <p data-i18n="focus.3.d">YOLOv8 object detection and pose estimation on RealSense depth streams, from dataset creation to live inference in a running cell.</p>
-            <div class="tools">YOLOv8 · Intel RealSense · rosbags</div>
-          </article>
-          <article class="focus reveal">
-            <svg aria-hidden="true"><use href="#i-arm"/></svg>
-            <h3 data-i18n="focus.4.t">Robot integration &amp; deployment</h3>
-            <p data-i18n="focus.4.d">URDF models, gripper integration, ros2_control and topic-based controllers, hand-eye calibration and cell bring-up, with Behavior Trees for task logic and Docker plus CI/CD to keep it reproducible.</p>
-            <div class="tools">ros2_control · Behavior Trees · Docker · CI/CD</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 04 SIMULATION & MOTION PLANNING ================= -->
-    <section class="block alt" id="stack">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2><span class="sec-num">04</span> <span data-i18n="stack.title">Simulation &amp; motion planning</span></h2>
-          <p data-i18n="stack.sub">The simulators and planners I use, and what I use each one for.</p>
-        </div>
-
-        <div class="stack-demo reveal">
-          <figure class="cell" style="margin:0">
-            <div class="cell-bar" aria-hidden="true">
-              <span class="dots"><i></i><i></i><i></i></span>
-              <span>pick_and_place · colour sort</span>
-              <span id="cell-mode">auto</span>
-            </div>
-            <canvas id="robot" width="600" height="408" role="img"
-              aria-label="Animated robot arm sorting coloured bricks into matching bins. Move your pointer over it to take control."></canvas>
-            <pre class="cell-hud" id="hud" aria-hidden="true">/joint_states</pre>
-            <span class="cell-hint" aria-hidden="true" data-i18n="hero.hint">move pointer to teleop ↗</span>
-            <figcaption class="visually-hidden">An interactive sketch of a colour-sorting pick-and-place cell, inspired by the LEGO demo at Nuremberg Messe 2025.</figcaption>
-          </figure>
-          <p class="stack-demo-note" data-i18n="stack.demo">A tiny planar sim of the Nuremberg task: inverse kinematics and a pick-and-place state machine, live in your browser. Move your pointer over it to take control.</p>
-        </div>
-
-        <div class="stack-grid">
-          <div class="stack-col reveal">
-            <h3 class="stack-h"><svg aria-hidden="true"><use href="#i-cube"/></svg><span data-i18n="stack.sim">Simulation</span></h3>
-            <article class="tool">
-              <div class="tool-head"><h4>NVIDIA Isaac Sim · Isaac Lab</h4><span class="tool-tag" data-i18n="stack.tag.rl">RL training</span></div>
-              <p data-i18n="stack.isaac">Training and evaluating RL policies for contact-rich pick-and-place, with domain randomization for sim-to-real. Also used to generate training data and run simulation-to-motion-planning workflows bridged to ROS 2.</p>
-            </article>
-            <article class="tool">
-              <div class="tool-head"><h4>MuJoCo</h4><span class="tool-tag" data-i18n="stack.tag.rl">RL training</span></div>
-              <p data-i18n="stack.mujoco">A second physics engine for training and evaluating the thesis policies, with reward shaping and curricula.</p>
-            </article>
-            <article class="tool">
-              <div class="tool-head"><h4>Gazebo</h4><span class="tool-tag" data-i18n="stack.tag.ros">ROS 2 testing</span></div>
-              <p data-i18n="stack.gazebo">URDF robot models bridged to ROS 2 for repeatable testing of planning and control before hardware trials.</p>
-            </article>
-            <article class="tool">
-              <div class="tool-head"><h4>Newton · PhysX</h4><span class="tool-tag" data-i18n="stack.tag.phys">Physics backends</span></div>
-              <p data-i18n="stack.physics">Evaluating physics-engine backends for training throughput in the thesis.</p>
-            </article>
-          </div>
-
-          <div class="stack-col reveal">
-            <h3 class="stack-h"><svg aria-hidden="true"><use href="#i-route"/></svg><span data-i18n="stack.plan">Motion planning</span></h3>
-            <article class="tool">
-              <div class="tool-head"><h4>MoveIt</h4><span class="tool-tag" data-i18n="stack.tag.sim2hw">Sim &amp; hardware</span></div>
-              <p data-i18n="stack.moveit">Motion planning for ROS 2 manipulators in simulation and on real arms, as part of the simulation-to-motion-planning workflow.</p>
-            </article>
-            <article class="tool">
-              <div class="tool-head"><h4>CuRobo</h4><span class="tool-tag" data-i18n="stack.tag.sim2hw">Sim &amp; hardware</span></div>
-              <p data-i18n="stack.curobo">Integrated alongside MoveIt in the dynamic path-planning system, with topic-based controllers.</p>
-            </article>
-            <article class="tool">
-              <div class="tool-head"><h4>RRT* · <span data-i18n="stack.trajopt">trajectory optimization</span></h4><span class="tool-tag" data-i18n="stack.tag.base">Baselines</span></div>
-              <p data-i18n="stack.rrt">Classical planners I benchmark the learned RL policies against in my thesis.</p>
-            </article>
-            <div class="callout">
-              <b data-i18n="stack.callout.t">What I learned comparing them</b>
-              <p data-i18n="stack.callout.d">In the Dynamic Path Planning project I compared planner behaviour across Gazebo and Isaac Sim to find where planned trajectories diverged on real hardware. That is exactly the gap my sim-to-real thesis work targets.</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
