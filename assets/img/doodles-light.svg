@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><g fill="none" stroke="#1F3864" stroke-opacity="0.085" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" font-family="monospace"><g fill="none">
+  <g transform="translate(40 40)"><path d="M0 64h40M20 64v-10l14-30 32 11"/><circle cx="34" cy="24" r="4.5"/><circle cx="20" cy="54" r="4.5"/><path d="M66 35l9-8M66 35l10 6"/></g>
+  <g transform="translate(250 36) rotate(9)"><rect x="0" y="0" width="30" height="18" rx="3"/><path d="M5 18 0 42h7M25 18l5 24h-7"/></g>
+  <g transform="translate(486 92)"><circle r="14"/><circle r="5"/><path d="M0-14v-6M0 14v6M-14 0h-6M14 0h6M10-10l4-4M-10 10l-4 4M10 10l4 4M-10-10l-4-4"/></g>
+  <g transform="translate(118 270)"><path d="M0 0h36M0 0v-36M0 0l-24 18M32-4l4 4-4 4M-4-32l4-4 4 4M-18 18l-6 0 2-6"/><text x="40" y="4" font-size="11">x</text><text x="-3" y="-42" font-size="11">z</text><text x="-36" y="26" font-size="11">y</text></g>
+  <g transform="translate(300 236)"><path d="M0 40C40-10 80 70 132 10" stroke-dasharray="4 6"/><circle cx="0" cy="40" r="3.5"/><circle cx="132" cy="10" r="3.5"/><path d="M60 35l4-4M60 31l4 4"/></g>
+  <g transform="translate(520 300) rotate(-8)"><rect x="0" y="8" width="44" height="20" rx="2"/><rect x="6" y="2" width="11" height="6" rx="1"/><rect x="27" y="2" width="11" height="6" rx="1"/></g>
+  <g transform="translate(56 420)"><circle cx="0" cy="0" r="4"/><circle cx="0" cy="22" r="4"/><circle cx="0" cy="44" r="4"/><circle cx="44" cy="11" r="4"/><circle cx="44" cy="33" r="4"/><path d="M4 0l36 11M4 0l36 33M4 22l36-11M4 22l36 11M4 44l36-33M4 44l36-11"/></g>
+  <g transform="translate(270 440)"><path d="M0 0l22-13 20 6M22-13l7-22M0 0l20 15 22-4M20 15l-4 22M42-7l14-14"/><circle cx="0" cy="0" r="3"/><circle cx="56" cy="-21" r="3"/><path d="M52-25l8 8M60-25l-8 8"/></g>
+  <g transform="translate(456 500)"><path d="M0 0v-46M0 0h66"/><path d="M2-6q10-2 14-12t16-8 14-14 16-4"/></g>
+  <g transform="translate(150 548)"><rect x="0" y="0" width="48" height="15" rx="7"/><circle cx="12" cy="7.5" r="3.5"/><circle cx="36" cy="7.5" r="3.5"/></g>
+  <g transform="translate(400 150) rotate(-12)"><path d="M0 0c8-10 22-10 30 0s22 10 30 0"/></g>
+  <path d="M210 140h8M214 136v8M560 210h8M564 206v8M40 330h8M44 326v8M360 360h8M364 356v8M560 560h8M564 556v8M330 560h8M334 556v8"/>
+</g></g><style>text{fill:#1F3864;fill-opacity:0.085;stroke:none}</style></svg>

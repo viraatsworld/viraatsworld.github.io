@@ -29,14 +29,16 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Set theme before paint to avoid a flash -->
+  <!-- Theme before paint: light by day, dark 19:00–07:00 local time; a manual toggle wins for 12 h -->
   <script>
     (function () {
       var d = document.documentElement;
       d.classList.add('js');
       try {
-        var t = localStorage.getItem('theme');
-        if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+        var t = null, m = JSON.parse(localStorage.getItem('themeManual') || 'null');
+        if (m && m.until > Date.now() && (m.theme === 'light' || m.theme === 'dark')) t = m.theme;
+        if (!t) { var h = new Date().getHours(); t = h >= 7 && h < 19 ? 'light' : 'dark'; }
+        d.setAttribute('data-theme', t);
         var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang');
         if (l === 'de') d.setAttribute('data-lang-pending', 'de');
       } catch (e) {}

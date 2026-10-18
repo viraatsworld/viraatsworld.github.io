@@ -7,27 +7,36 @@
     try { localStorage.setItem(key, value); } catch (e) {}
   }
 
-  /* ---------- Theme toggle ---------- */
+  /* ---------- Theme: light by day, dark 19:00–07:00; manual toggle wins for 12 h ---------- */
   var themeBtn = document.getElementById('theme-toggle');
-  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  function isDark() {
-    var t = root.getAttribute('data-theme');
-    return t ? t === 'dark' : darkQuery.matches;
+  var MANUAL_MS = 12 * 60 * 60 * 1000;
+  function manualTheme() {
+    try {
+      var m = JSON.parse(localStorage.getItem('themeManual') || 'null');
+      return m && m.until > Date.now() ? m.theme : null;
+    } catch (e) { return null; }
+  }
+  function timeTheme() {
+    var h = new Date().getHours();
+    return h >= 7 && h < 19 ? 'light' : 'dark';
+  }
+  function isDark() { return root.getAttribute('data-theme') === 'dark'; }
+  function applyTheme(t) {
+    if (root.getAttribute('data-theme') === t) return;
+    root.setAttribute('data-theme', t);
+    syncThemeLabel();
+    window.dispatchEvent(new Event('themechange'));
   }
   function syncThemeLabel() {
     themeBtn.setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode');
   }
   themeBtn.addEventListener('click', function () {
     var next = isDark() ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    store('theme', next);
-    syncThemeLabel();
-    window.dispatchEvent(new Event('themechange'));
+    store('themeManual', JSON.stringify({ theme: next, until: Date.now() + MANUAL_MS }));
+    applyTheme(next);
   });
-  darkQuery.addEventListener('change', function () {
-    syncThemeLabel();
-    window.dispatchEvent(new Event('themechange'));
-  });
+  // Follow the clock while the page stays open (e.g. across 19:00)
+  setInterval(function () { if (!manualTheme()) applyTheme(timeTheme()); }, 5 * 60 * 1000);
   syncThemeLabel();
 
   /* ---------- Language: English (in the HTML) / German (assets/js/i18n-de.js) ---------- */
@@ -95,21 +104,50 @@
   }, { passive: true });
   onScroll();
 
-  /* ---------- Active nav link + reveal on scroll ---------- */
+  /* ---------- Section dots (desktop) ---------- */
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  var dots = document.createElement('ul');
+  dots.className = 'section-dots';
+  dots.setAttribute('aria-hidden', 'true');
+  var dotFor = {};
+  sections.forEach(function (sec) {
+    var h2 = sec.querySelector('h2');
+    var label = sec.id === 'top' ? 'Viraat Saaran' : h2 ? h2.textContent.trim() : sec.id;
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = '#' + sec.id;
+    a.tabIndex = -1;
+    var span = document.createElement('span');
+    span.textContent = label;
+    a.appendChild(span);
+    li.appendChild(a);
+    dots.appendChild(li);
+    dotFor[sec.id] = { a: a, span: span, h2: h2 };
+  });
+  document.body.appendChild(dots);
+  // Keep dot labels in the current language
+  langBtn.addEventListener('click', function () {
+    sections.forEach(function (sec) {
+      var d = dotFor[sec.id];
+      if (d.h2) d.span.textContent = d.h2.textContent.trim();
+    });
+  });
+
+  /* ---------- Active section (nav + dots) and reveal on scroll ---------- */
   if ('IntersectionObserver' in window) {
     var linkFor = {};
     navLinks.querySelectorAll('a').forEach(function (a) { linkFor[a.getAttribute('href').slice(1)] = a; });
     var sectionObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        var link = linkFor[entry.target.id];
-        if (!link) return;
-        if (entry.isIntersecting) {
-          navLinks.querySelectorAll('a.active').forEach(function (a) { a.classList.remove('active'); });
-          link.classList.add('active');
-        }
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id;
+        navLinks.querySelectorAll('a.active').forEach(function (a) { a.classList.remove('active'); });
+        if (linkFor[id]) linkFor[id].classList.add('active');
+        dots.querySelectorAll('a.active').forEach(function (a) { a.classList.remove('active'); });
+        if (dotFor[id]) dotFor[id].a.classList.add('active');
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    document.querySelectorAll('main section[id]').forEach(function (s) { sectionObserver.observe(s); });
+    sections.forEach(function (s) { sectionObserver.observe(s); });
 
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -119,8 +157,10 @@
         }
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-    document.querySelectorAll('.reveal').forEach(function (el, i) {
-      el.style.transitionDelay = (i % 5) * 60 + 'ms';
+    // Stagger siblings: cards in the same grid come in one after another
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.classList.contains('reveal'); });
+      el.style.transitionDelay = Math.min(sibs.indexOf(el), 5) * 90 + 'ms';
       revealObserver.observe(el);
     });
   } else {
