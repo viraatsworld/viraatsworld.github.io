@@ -7,6 +7,7 @@ Site available in English and German (?lang=de).
 ## Contact
 - Email: viraatsaaran@gmail.com
 - Phone: +49 15567111159
+- LinkedIn: https://www.linkedin.com/in/viraat-saaran-496784167/
 - GitHub: https://github.com/viraatsworld
 - CV: https://drive.google.com/file/d/1E-PbDVGFRCXdPBhN7hja7vxbTHTLTPji/view?usp=sharing
 
